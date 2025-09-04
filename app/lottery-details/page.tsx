@@ -14,7 +14,7 @@ const ClientWrapper = dynamic(
 );
 
 export const generateMetadata = async (): Promise<Metadata> => ({
-	title: "Lottery Details | Betwins - Online Crypto Gaming",
+	title: "Crypto Details | Betwins - Online Crypto Gaming",
 	description:
 		"Welcome to Betwins - the ultimate crypto gaming & lottery experience.",
 	keywords: ["crypto gaming", "lottery", "betwins", "casino", "blockchain"],
@@ -40,7 +40,7 @@ const page = () => {
 	return (
 		<div className="page-wrapper a-cursor">
 			<Header />
-			<Breadcrumb title="Lottery Details" />
+			<Breadcrumb title="Crypto Details" />
 			<LotteryDetails />
 			<WorkSection />
 			<Sponsors />

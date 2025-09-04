@@ -35,41 +35,17 @@ const Header = ({ showTopGames = true }: HeaderProps) => {
 
                   <div className="navbar__menu d-none d-xl-block">
                     <ul className="navbar__list">
-                      {NavbarData.map((item, index) =>
-                        item.submenu ? (
-                          <li
-                            className="navbar__item navbar__item--has-children nav-fade"
-                            key={index}
-                          >
-                            <a
-                              className="navbar__dropdown-label dropdown-label-alter"
-                              aria-label="dropdown menu"
-                            >
-                              {item.title}
-                            </a>
-                            <ul className="navbar__sub-menu">
-                              {item.submenu.map((sub, i) => (
-                                <li key={i}>
-                                  <Link href={sub.path}>{sub.title}</Link>
-                                </li>
-                              ))}
-                            </ul>
-                          </li>
-                        ) : (
-                          <li className="navbar__item nav-fade" key={index}>
-                            <Link href={item.path}>{item.title}</Link>
-                          </li>
-                        )
-                      )}
+                      {NavbarData.map((item, index) => (
+                        <li className="navbar__item nav-fade" key={index}>
+                          <Link href={item.path}>{item.title}</Link>
+                        </li>
+                      ))}
                     </ul>
                   </div>
 
                   <div className="navbar__options">
                     <div className="navbar__mobile-options">
                       <div className="navbar__mobile-icons">
-                        <div className="search-box">
-                          <SearchTrigger />
-                        </div>
                         <LanguageSelector />
                       </div>
 

@@ -2,11 +2,9 @@ import dynamic from "next/dynamic";
 import type { Metadata } from "next";
 import Header from "@/components/layout/header/Header";
 import Breadcrumb from "@/components/layout/banner/Breadcrumb";
-import AboutSection from "@/components/containers/about/AboutSection";
-import ChooseSection from "@/components/containers/ChooseSection";
-import CounterSection from "@/components/containers/CounterSection";
-import Testimonial from "@/components/containers/testimonial/Testimonial";
-import ReferTwoSection from "@/components/containers/ReferTwoSection";
+import LotteryDetails from "@/components/containers/lottery/LotteryDetails";
+import WorkSection from "@/components/containers/WorkSection";
+import StorySection from "@/components/containers/StorySection";
 import FooterTwo from "@/components/layout/footer/FooterTwo";
 
 const Sponsors = dynamic(() => import("@/components/containers/Sponsors"));
@@ -16,7 +14,7 @@ const ClientWrapper = dynamic(
 );
 
 export const generateMetadata = async (): Promise<Metadata> => ({
-  title: "About | Betwins - Online Crypto Gaming",
+  title: "Crypto Details | Betwins - Online Crypto Gaming",
   description:
     "Welcome to Betwins - the ultimate crypto gaming & lottery experience.",
   keywords: ["crypto gaming", "lottery", "betwins", "casino", "blockchain"],
@@ -42,13 +40,11 @@ const page = () => {
   return (
     <div className="page-wrapper a-cursor">
       <Header />
-      <Breadcrumb title="About Us" />
-      <AboutSection />
-      <ChooseSection />
-      <CounterSection />
-      <Testimonial />
+      <Breadcrumb title="Crypto Details" />
+      <LotteryDetails />  //Todo: Change to crypto to transactions
+      <WorkSection />
       <Sponsors />
-      <ReferTwoSection />
+      <StorySection layout="two" />
       <FooterTwo />
       <ClientWrapper />
     </div>

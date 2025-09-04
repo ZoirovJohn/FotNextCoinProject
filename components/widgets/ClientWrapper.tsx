@@ -2,31 +2,31 @@
 import dynamic from "next/dynamic";
 
 const NiceSelectWrapper = dynamic(() => import("./NiceSelectWrapper"), {
-	ssr: false,
+  ssr: false,
 });
 const CustomCursor = dynamic(() => import("./CustomCursor"), {
-	ssr: false,
+  ssr: false,
 });
 const ScrollProgress = dynamic(() => import("./ScrollProgress"), {
-	ssr: false,
+  ssr: false,
 });
 const CustomAnimations = dynamic(() => import("./CustomAnimations"), {
-	ssr: false,
+  ssr: false,
 });
 const InitAnimations = dynamic(() => import("./InitAnimations"), {
-	ssr: false,
+  ssr: false,
 });
 
 const ClientWrapper = () => {
-	return (
-		<>
-			<NiceSelectWrapper />
-			<CustomCursor />
-			<ScrollProgress />
-			<CustomAnimations />
-			<InitAnimations />
-		</>
-	);
+  return (
+    <>
+      <NiceSelectWrapper />
+      <CustomCursor />
+      <ScrollProgress />
+      <CustomAnimations />
+      <InitAnimations />
+    </>
+  );
 };
 
 export default ClientWrapper;

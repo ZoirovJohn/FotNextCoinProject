@@ -1,48 +1,65 @@
-import dynamic from "next/dynamic";
 import type { Metadata } from "next";
 import Header from "@/components/layout/header/Header";
 import Breadcrumb from "@/components/layout/banner/Breadcrumb";
 import ContactSection from "@/components/containers/ContactSection";
 import ContactMap from "@/components/containers/ContactMap";
 import FooterTwo from "@/components/layout/footer/FooterTwo";
-const ClientWrapper = dynamic(
-	() => import("@/components/widgets/ClientWrapper")
-);
+
+import ClientWrapper from "@/components/widgets/ClientWrapper";
 
 export const generateMetadata = async (): Promise<Metadata> => ({
-	title: "Contact Us | Betwins - Online Crypto Gaming",
-	description:
-		"Welcome to Betwins - the ultimate crypto gaming & lottery experience.",
-	keywords: ["crypto gaming", "lottery", "betwins", "casino", "blockchain"],
-	openGraph: {
-		title: "Betwins - Crypto Gaming & Lottery",
-		description: "Experience seamless blockchain - based gaming and lotteries.",
-		url: "https://betwins.netlify.app/",
-		siteName: "Betwins",
-		images: [
-			{
-				url: "/images/og-image.png",
-				width: 1200,
-				height: 630,
-				alt: "Betwins Crypto Gaming",
-			},
-		],
-		type: "website",
-	},
-	twitter: { card: "summary_large_image" },
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://omad.example"
+  ),
+  alternates: { canonical: "/contact-us" },
+  title: "Contact Us | OMAD — Borderless Digital Payments",
+  description:
+    "Get in touch with OMAD — a fast, secure, global wallet for digital assets and everyday payments.",
+  keywords: [
+    "OMAD",
+    "digital wallet",
+    "payments",
+    "crypto",
+    "global transfers",
+    "remittance",
+  ],
+  openGraph: {
+    title: "OMAD — Borderless Digital Payments",
+    description:
+      "Experience fast, secure, blockchain-based payments with OMAD.",
+    url: "/contact-us",
+    siteName: "OMAD",
+    images: [
+      {
+        url: "/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "OMAD Open Graph Image",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "OMAD — Borderless Digital Payments",
+    description:
+      "Experience fast, secure, blockchain-based payments with OMAD.",
+    images: ["/images/og-image.png"],
+  },
+  robots: { index: true, follow: true },
 });
 
-const page = () => {
-	return (
-		<div className="page-wrapper a-cursor">
-			<Header />
-			<Breadcrumb title="Contact Us" />
-			<ContactSection />
-			<ContactMap />
-			<FooterTwo layout="two" showNewsletter={false} />
-			<ClientWrapper />
-		</div>
-	);
+const Page = () => {
+  return (
+    <div className="page-wrapper a-cursor">
+      <Header />
+      <Breadcrumb title="Contact OMAD" />
+      <ContactSection />
+      <ContactMap />
+      <FooterTwo layout="two" showNewsletter={false} />
+      <ClientWrapper />
+    </div>
+  );
 };
 
-export default page;
+export default Page;
