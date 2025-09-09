@@ -1,5 +1,4 @@
 "use client";
-
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import Image from "next/image";
@@ -8,9 +7,10 @@ import logo from "@/public/images/logo.png";
 import TopGames from "./TopGames";
 import { useAuth } from "@/lib/contexts/AuthContext";
 import { useRouter } from "next/navigation";
+import translations from "@/public/locals/translations";
+import { useLanguage } from "@/lib/contexts/LanguageContext";
 
 const HeaderClient = dynamic(() => import("./HeaderClient"));
-const SearchTrigger = dynamic(() => import("./SearchTrigger"));
 const OffcanvasTrigger = dynamic(() => import("./OffcanvasTrigger"));
 const LanguageSelector = dynamic(
   () => import("@/components/layout/header/LanguageSelector")
@@ -23,11 +23,8 @@ interface HeaderProps {
 const Header = ({ showTopGames = true }: HeaderProps) => {
   // add auth here
   const { user, ready, logout } = useAuth();
-  console.log("Header user:", user);
-  console.log("Header ready:", ready);
-  
-  
   const router = useRouter();
+  const lang = useLanguage().lang;
 
   return (
     <HeaderClient>
@@ -48,11 +45,19 @@ const Header = ({ showTopGames = true }: HeaderProps) => {
 
                   <div className="navbar__menu d-none d-xl-block">
                     <ul className="navbar__list">
-                      {NavbarData.map((item, index) => (
-                        <li className="navbar__item nav-fade" key={index}>
-                          <Link href={item.path}>{item.title}</Link>
-                        </li>
-                      ))}
+                      {NavbarData.map((item, index) => {
+                        const titleKey = item.title.replace(/\s+/g, "");
+                        const translatedTitle =
+                          translations[lang].navbar[
+                            titleKey as keyof typeof translations.en.navbar
+                          ] || item.title;
+
+                        return (
+                          <li className="navbar__item nav-fade" key={index}>
+                            <Link href={item.path}>{translatedTitle}</Link>
+                          </li>
+                        );
+                      })}
                     </ul>
                   </div>
 
@@ -72,16 +77,17 @@ const Header = ({ showTopGames = true }: HeaderProps) => {
                               router.refresh();
                             }}
                           >
-                            Logout <i className="ti ti-arrow-narrow-right"></i>
+                            {translations[lang].Logout}{" "}
+                            <i className="ti ti-arrow-narrow-right"></i>
                           </button>
                         ) : (
                           <>
                             <Link href="sign-in" className="btn--secondary">
-                              Sign In{" "}
+                              {translations[lang].Signin}
                               <i className="ti ti-arrow-narrow-right"></i>
                             </Link>
                             <Link href="sign-up" className="btn--primary">
-                              Sign Up{" "}
+                              {translations[lang].Signup}
                               <i className="ti ti-arrow-narrow-right"></i>
                             </Link>
                           </>

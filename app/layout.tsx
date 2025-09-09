@@ -5,6 +5,7 @@ import "@/public/icons/css/all.min.css";
 import "@/public/icons/css/tabler-icons.min.css";
 import "@/public/scss/app.scss";
 import { AuthProvider } from "@/lib/contexts/AuthContext";
+import { LanguageProvider } from "@/lib/contexts/LanguageContext";
 
 const chakraPetch = Chakra_Petch({
   variable: "--chakra",
@@ -62,7 +63,9 @@ export default function RootLayout({
   return (
     <html lang="en" data-scroll-behavior="smooth">
       <body className={`${chakraPetch.variable}`}>
-        <AuthProvider>{children}</AuthProvider>
+        <AuthProvider>
+          <LanguageProvider> {children}</LanguageProvider>
+        </AuthProvider>
       </body>
     </html>
   );

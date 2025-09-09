@@ -31,62 +31,64 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   // === Bootstrap on page load: explicit refresh -> me ===
   useEffect(() => {
-  (async () => {
-    try {
-      const existingToken = localStorage.getItem("accessToken");
-      const existingUser = localStorage.getItem("user");
+    (async () => {
+      try {
+        const existingToken = localStorage.getItem("accessToken");
+        const existingUser = localStorage.getItem("user");
 
-      if (existingUser) {
-        setUser(JSON.parse(existingUser));
-      }
+        if (existingUser) {
+          setUser(JSON.parse(existingUser));
+        }
 
-      if (!existingToken) {
-        setUser(null);
-        setToken(null);
-        setReady(true);
-        return;
-      }
+        if (!existingToken) {
+          setUser(null);
+          setToken(null);
+          setReady(true);
+          return;
+        }
 
-      // try refresh token
-      const r = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}${process.env.NEXT_PUBLIC_API_PREFIX ?? ""}/auth/refresh`,
-        { method: "POST", credentials: "include" }
-      );
+        // try refresh token
+        const r = await fetch(
+          `${process.env.NEXT_PUBLIC_API_URL}${
+            process.env.NEXT_PUBLIC_API_PREFIX ?? ""
+          }/auth/refresh`,
+          { method: "POST", credentials: "include" }
+        );
 
-      if (!r.ok) {
+        if (!r.ok) {
+          setUser(null);
+          setToken(null);
+          localStorage.removeItem("accessToken");
+          localStorage.removeItem("user");
+          return;
+        }
+
+        const { accessToken } = await r.json();
+        setToken(accessToken);
+        localStorage.setItem("accessToken", accessToken);
+
+        // refresh user data
+        const me = await api.me(accessToken);
+        setUser((me.data as any).user ?? null);
+        localStorage.setItem(
+          "user",
+          JSON.stringify((me.data as any).user ?? {})
+        );
+      } catch {
         setUser(null);
         setToken(null);
         localStorage.removeItem("accessToken");
         localStorage.removeItem("user");
-        return;
+      } finally {
+        setReady(true);
       }
-
-      const { accessToken } = await r.json();
-      setToken(accessToken);
-      localStorage.setItem("accessToken", accessToken);
-
-      // refresh user data
-      const me = await api.me(accessToken);
-      setUser((me.data as any).user ?? null);
-      localStorage.setItem("user", JSON.stringify((me.data as any).user ?? {}));
-    } catch {
-      setUser(null);
-      setToken(null);
-      localStorage.removeItem("accessToken");
-      localStorage.removeItem("user");
-    } finally {
-      setReady(true);
-    }
-  })();
-}, []);
-
+    })();
+  }, []);
 
   const register = async (email: string, password: string, name?: string) => {
     if (!email || !password) throw new Error("Email and password required");
 
     const { data } = await api.register(email, password, name);
-    console.log(`register data:`, data);
-    
     const accessToken = (data as any).accessToken as string | undefined;
 
     setToken(accessToken ?? null);
@@ -103,7 +105,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
     const { data } = await api.login(email, password);
     const accessToken = (data as any).accessToken as string | undefined;
-    console.log(`login accessToken:`, accessToken);
 
     setToken(accessToken ?? null);
     setUser((data as any).user ?? null);

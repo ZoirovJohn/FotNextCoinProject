@@ -4,8 +4,6 @@ import Link from "next/link";
 import { useAuth } from "@/lib/contexts/AuthContext";
 
 export default function RegisterForm() {
-  console.log("Render RegisterForm");
-  
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const { register } = useAuth();
@@ -22,10 +20,7 @@ export default function RegisterForm() {
     const password = String(formData.get("password"));
 
     try {
-      console.log("Registration successful");
       await register(email, password, name);
-      console.log("after Registration successful");
-
       window.location.href = "/";
     } catch (err: any) {
       setError(err.message || "Registration failed");
