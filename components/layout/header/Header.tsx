@@ -1,9 +1,14 @@
+"use client";
+
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import Image from "next/image";
 import NavbarData from "@/public/data/navbar-data";
 import logo from "@/public/images/logo.png";
 import TopGames from "./TopGames";
+import { useAuth } from "@/lib/contexts/AuthContext";
+import { useRouter } from "next/navigation";
+
 const HeaderClient = dynamic(() => import("./HeaderClient"));
 const SearchTrigger = dynamic(() => import("./SearchTrigger"));
 const OffcanvasTrigger = dynamic(() => import("./OffcanvasTrigger"));
@@ -16,6 +21,14 @@ interface HeaderProps {
 }
 
 const Header = ({ showTopGames = true }: HeaderProps) => {
+  // add auth here
+  const { user, ready, logout } = useAuth();
+  console.log("Header user:", user);
+  console.log("Header ready:", ready);
+  
+  
+  const router = useRouter();
+
   return (
     <HeaderClient>
       <header className="header">
@@ -50,12 +63,29 @@ const Header = ({ showTopGames = true }: HeaderProps) => {
                       </div>
 
                       <div className="navbar__cta d-none d-sm-flex">
-                        <Link href="sign-in" className="btn--secondary">
-                          Sign In <i className="ti ti-arrow-narrow-right"></i>
-                        </Link>
-                        <Link href="sign-up" className="btn--primary">
-                          Sign Up <i className="ti ti-arrow-narrow-right"></i>
-                        </Link>
+                        {/* 🔑 here’s the switch */}
+                        {ready && user ? (
+                          <button
+                            className="btn--primary"
+                            onClick={async () => {
+                              await logout();
+                              router.refresh();
+                            }}
+                          >
+                            Logout <i className="ti ti-arrow-narrow-right"></i>
+                          </button>
+                        ) : (
+                          <>
+                            <Link href="sign-in" className="btn--secondary">
+                              Sign In{" "}
+                              <i className="ti ti-arrow-narrow-right"></i>
+                            </Link>
+                            <Link href="sign-up" className="btn--primary">
+                              Sign Up{" "}
+                              <i className="ti ti-arrow-narrow-right"></i>
+                            </Link>
+                          </>
+                        )}
                       </div>
                     </div>
 

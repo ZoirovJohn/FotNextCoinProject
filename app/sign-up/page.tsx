@@ -37,7 +37,7 @@ const page = () => {
   return (
     <div
       className="page-wrapper a-cursor authentication-bg"
-      style={{ backgroundImage: "url(/images/omad/auth-bg.jpg)" }} // make sure this exists
+      style={{ backgroundImage: "url(images/error-bg.jpg)" }} // make sure this exists
     >
       <HeaderThree />
       <CreateAccount />
