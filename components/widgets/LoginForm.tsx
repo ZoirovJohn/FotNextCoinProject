@@ -1,13 +1,19 @@
 "use client";
+
 import { useState } from "react";
 import Link from "next/link";
 import { useAuth } from "@/lib/contexts/AuthContext";
+import { useLanguage } from "@/lib/contexts/LanguageContext";
+import translations from "@/public/locals/translations";
 
 export default function LoginForm() {
   const { login } = useAuth();
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [pending, setPending] = useState(false);
+
+  const { lang } = useLanguage();
+  const t = translations[lang].auth;
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -22,7 +28,7 @@ export default function LoginForm() {
       await login(email, password);
       window.location.href = "/"; // redirect after login
     } catch (err: any) {
-      setError(err?.message || "Login failed");
+      setError(err?.message || `${t.signIn} failed`);
     } finally {
       setPending(false);
     }
@@ -31,13 +37,13 @@ export default function LoginForm() {
   return (
     <form onSubmit={handleSubmit}>
       <div className="input-wrapper mt-30">
-        <label htmlFor="authEmail">Your Email</label>
+        <label htmlFor="authEmail">{t.yourEmail}</label>
         <div className="input-single">
           <input
             type="email"
             name="auth-email"
             id="authEmail"
-            placeholder="Enter Email"
+            placeholder={t.yourEmail}
             required
           />
           <i className="fa-solid fa-envelope"></i>
@@ -45,20 +51,20 @@ export default function LoginForm() {
       </div>
 
       <div className="input-wrapper mt-30 password-group">
-        <label htmlFor="authPassword">Your Password</label>
+        <label htmlFor="authPassword">{t.yourPassword}</label>
         <div className="input-single">
           <input
             type={showPassword ? "text" : "password"}
             name="auth-password"
             id="authPassword"
-            placeholder="Enter password"
+            placeholder={t.yourPassword}
             required
           />
           <i
             className={`ti ${showPassword ? "ti-eye" : "ti-eye-off"} show-pass`}
             onClick={() => setShowPassword((p) => !p)}
             style={{ cursor: "pointer" }}
-            aria-label="Toggle password visibility"
+            aria-label={showPassword ? t.hidePassword : t.showPassword}
           />
         </div>
       </div>
@@ -70,10 +76,10 @@ export default function LoginForm() {
       )}
 
       <p className="text-end mt-16 forget-pass">
-        <Link href="contact-us">Forget Password?</Link>
+        <Link href="contact-us">{t.forgetPassword}</Link>
       </p>
       <p className="create-msg mt-20">
-        Don&apos;t have an account? <Link href="sign-up">Sign Up</Link>
+        {t.haveAccount} <Link href="sign-up">{t.signUp}</Link>
       </p>
 
       <div className="mt-40">
@@ -83,7 +89,7 @@ export default function LoginForm() {
           disabled={pending}
           aria-disabled={pending}
         >
-          {pending ? "Signing in…" : "Sign In"}{" "}
+          {pending ? t.creating : t.signIn}{" "}
           <i className="ti ti-arrow-narrow-right"></i>
         </button>
       </div>

@@ -2,12 +2,15 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useAuth } from "@/lib/contexts/AuthContext";
+import { useLanguage } from "@/lib/contexts/LanguageContext";
+import translations from "@/public/locals/translations";
 
 export default function RegisterForm() {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const { register } = useAuth();
   const [pending, setPending] = useState(false);
+  const { lang } = useLanguage(); // get current language
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -29,10 +32,12 @@ export default function RegisterForm() {
     }
   }
 
+  const t = translations[lang].auth; // shorthand for current language texts
+
   return (
     <form onSubmit={handleSubmit} noValidate>
       <div className="input-wrapper">
-        <label htmlFor="authName">Name</label>
+        <label htmlFor="authName">{t.name}</label>
         <div className="input-single">
           <input
             id="authName"
@@ -46,7 +51,7 @@ export default function RegisterForm() {
       </div>
 
       <div className="input-wrapper mt-30">
-        <label htmlFor="authEmail">Your Email</label>
+        <label htmlFor="authEmail">{t.yourEmail}</label>
         <div className="input-single">
           <input
             id="authEmail"
@@ -60,7 +65,7 @@ export default function RegisterForm() {
       </div>
 
       <div className="input-wrapper mt-30">
-        <label htmlFor="authPassword">Your Password</label>
+        <label htmlFor="authPassword">{t.yourPassword}</label>
         <div className="input-single">
           <input
             id="authPassword"
@@ -74,7 +79,7 @@ export default function RegisterForm() {
             type="button"
             className="show-pass"
             onClick={() => setShowPassword((p) => !p)}
-            aria-label={showPassword ? "Hide password" : "Show password"}
+            aria-label={showPassword ? t.hidePassword : t.showPassword}
             style={{ background: "transparent", border: 0, cursor: "pointer" }}
           >
             <i
@@ -92,7 +97,7 @@ export default function RegisterForm() {
       )}
 
       <p className="create-msg mt-20">
-        Have an account? <Link href="/sign-in">Sign In</Link>
+        {t.haveAccount} <Link href="/sign-in">{t.signIn}</Link>
       </p>
 
       <div className="mt-40">
@@ -102,7 +107,7 @@ export default function RegisterForm() {
           disabled={pending}
           aria-disabled={pending}
         >
-          {pending ? "Creating…" : "Sign Up"}{" "}
+          {pending ? t.creating : t.signUp}{" "}
           <i className="ti ti-arrow-narrow-right" />
         </button>
       </div>

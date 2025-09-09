@@ -1,13 +1,20 @@
+"use client";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import Image from "next/image";
+import { useLanguage } from "@/lib/contexts/LanguageContext";
+
 import circle from "@/public/images/authentication/circle.png";
 import thumb from "@/public/images/authentication/thumb.png";
 import numbers from "@/public/images/authentication/numbers.png";
+import translations from "@/public/locals/translations";
 
 const RegisterForm = dynamic(() => import("../widgets/RegisterForm"));
 
 const CreateAccount = () => {
+  const { lang } = useLanguage();
+  const t = translations[lang].auth;
+
   return (
     <section className="authentication pt-120 pb-120">
       <div className="container">
@@ -21,19 +28,20 @@ const CreateAccount = () => {
               <div className="authentication__intro">
                 <Link
                   href="/"
-                  aria-label="back to home"
-                  title="back to home"
+                  aria-label={t.backToHome}
+                  title={t.backToHome}
                   className="btn--primary"
                 >
-                  <i className="ti ti-arrow-narrow-left"></i>Back To Home
+                  <i className="ti ti-arrow-narrow-left"></i>
+                  {t.backToHome}
                 </Link>
               </div>
 
               <div className="authentication__content mt-80">
                 <h4 className="title-animation neutral-top fw-6 mb-10">
-                  Let&apos;s Get Started!
+                  {t.letsGetStarted}
                 </h4>
-                <p>Getting Started Is Easy.</p>
+                <p>{t.gettingStarted}</p>
               </div>
 
               <div className="authentication__form mt-55">
