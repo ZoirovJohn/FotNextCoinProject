@@ -6,6 +6,7 @@ import LotteryDetails from "@/components/containers/lottery/LotteryDetails";
 import WorkSection from "@/components/containers/WorkSection";
 import StorySection from "@/components/containers/StorySection";
 import FooterTwo from "@/components/layout/footer/FooterTwo";
+import Video from "@/components/containers/VIdeo/Video";
 
 const Sponsors = dynamic(() => import("@/components/containers/Sponsors"));
 
@@ -41,6 +42,7 @@ const page = () => {
     <div className="page-wrapper a-cursor">
       <Header />
       <Breadcrumb title="Crypto Details" />
+      <Video />
       <LotteryDetails />  //Todo: Change to crypto to transactions
       <WorkSection />
       <Sponsors />
