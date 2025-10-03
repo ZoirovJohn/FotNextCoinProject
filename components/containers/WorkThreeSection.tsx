@@ -43,7 +43,7 @@ const WorkThreeSection = () => {
                 </p>
                 <h6 className="fw-6 mt-16">Sign Up Instantly</h6>
                 <p className="text-sm mt-16">
-                  Create your Lvup account in just a few minutes. Simply
+                  Create your Fafai account in just a few minutes. Simply
                   register
                 </p>
               </div>

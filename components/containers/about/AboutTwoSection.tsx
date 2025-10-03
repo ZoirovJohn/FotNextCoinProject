@@ -64,7 +64,7 @@ const AboutTwoSection = () => {
                   <div className="content">
                     <h6 className="fw-6">Fair Draws</h6>
                     <p className="text-sm mt-10">
-                      All lottery draws on Lvup are powered by blockchain
+                      All lottery draws on Fafai are powered by blockchain
                       algorithms.
                     </p>
                   </div>
@@ -100,8 +100,8 @@ const AboutTwoSection = () => {
                   <div className="content">
                     <h6 className="fw-6">Accessibility</h6>
                     <p className="text-sm mt-10">
-                      Lvup is borderless. No matter where you are, you can join,
-                      play.
+                      Fafai is borderless. No matter where you are, you can
+                      join, play.
                     </p>
                   </div>
                 </div>

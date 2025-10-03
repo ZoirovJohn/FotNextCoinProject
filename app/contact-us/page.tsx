@@ -9,14 +9,14 @@ import ClientWrapper from "@/components/widgets/ClientWrapper";
 
 export const generateMetadata = async (): Promise<Metadata> => ({
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://lvup.example"
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://fafai.example"
   ),
   alternates: { canonical: "/contact-us" },
-  title: "Contact Us | LVUP — Borderless Digital Payments",
+  title: "Contact Us | FAFAI — Borderless Digital Payments",
   description:
-    "Get in touch with LVUP — a fast, secure, global wallet for digital assets and everyday payments.",
+    "Get in touch with FAFAI — a fast, secure, global wallet for digital assets and everyday payments.",
   keywords: [
-    "LVUP",
+    "FAFAI",
     "digital wallet",
     "payments",
     "crypto",
@@ -24,26 +24,26 @@ export const generateMetadata = async (): Promise<Metadata> => ({
     "remittance",
   ],
   openGraph: {
-    title: "LVUP — Borderless Digital Payments",
+    title: "FAFAI — Borderless Digital Payments",
     description:
-      "Experience fast, secure, blockchain-based payments with LVUP.",
+      "Experience fast, secure, blockchain-based payments with FAFAI.",
     url: "/contact-us",
-    siteName: "LVUP",
+    siteName: "FAFAI",
     images: [
       {
         url: "/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "LVUP Open Graph Image",
+        alt: "FAFAI Open Graph Image",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "LVUP — Borderless Digital Payments",
+    title: "FAFAI — Borderless Digital Payments",
     description:
-      "Experience fast, secure, blockchain-based payments with LVUP.",
+      "Experience fast, secure, blockchain-based payments with FAFAI.",
     images: ["/images/og-image.png"],
   },
   robots: { index: true, follow: true },
@@ -53,7 +53,7 @@ const Page = () => {
   return (
     <div className="page-wrapper a-cursor">
       <Header />
-      <Breadcrumb title="Contact LVUP" />
+      <Breadcrumb title="Contact FAFAI" />
       <ContactSection />
       <ContactMap />
       <FooterTwo layout="two" showNewsletter={false} />

@@ -26,11 +26,11 @@ const StorySection = ({ layout = "one" }: StoryProps) => {
                 <strong>Real Voices,</strong> Real Impact
               </span>
               <h2 className="title-animation fw-6 mt-25">
-                Stories from the LVUPCoin Community
+                Stories from the FAFAICoin Community
               </h2>
               <p className="mt-25">
                 Hear directly from players around the world using{" "}
-                <strong>LVUPCoin</strong> for instant rewards, smooth gameplay,
+                <strong>FAFAICoin</strong> for instant rewards, smooth gameplay,
                 and borderless payouts. Every win is more than just a number—
                 it’s a story worth sharing.
               </p>

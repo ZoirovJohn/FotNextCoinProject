@@ -72,7 +72,7 @@ const ChooseSection = ({ layout = "one" }: ChooseProps) => {
                   Payments
                 </h2>
                 <p className="mt-25">
-                  LVUP prioritizes security and simplicity. Effortlessly send,
+                  FAFAI prioritizes security and simplicity. Effortlessly send,
                   receive, and manage value worldwide with a sleek, fast, and
                   modern experience designed for everyday use.
                 </p>
@@ -122,7 +122,7 @@ const ChooseSection = ({ layout = "one" }: ChooseProps) => {
               <div className="mt-40">
                 <Link
                   href="/terms-conditions"
-                  aria-label="Learn more about LVUP platform"
+                  aria-label="Learn more about FAFAI platform"
                   title="Learn more"
                   className="btn--primary"
                 >

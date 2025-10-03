@@ -48,12 +48,12 @@ const FooterTwo = ({
             >
               <div className="footer__widget-intro">
                 <Link href="/" className="logo">
-                  <Image src={logo} alt="Lvup Logo" />
+                  <Image src={logo} alt="Fafai Logo" />
                 </Link>
               </div>
               <div className="footer__widget-content mt-25">
                 <p>
-                  Lvup is an innovative Online Crypto Gaming platform designed
+                  Fafai is an innovative Online Crypto Gaming platform designed
                   for players to play, earn, and explore blockchain gaming.
                 </p>
               </div>
@@ -216,13 +216,13 @@ const FooterTwo = ({
                   </div>
                   <div className="content">
                     <p>
-                      <Link href="mailto:example@lvup.com">
-                        example@lvup.com
+                      <Link href="mailto:example@fafai.com">
+                        example@fafai.com
                       </Link>
                     </p>
                     <p className="mt-4">
-                      <Link href="mailto:contact@lvup.com">
-                        contact@lvup.com
+                      <Link href="mailto:contact@fafai.com">
+                        contact@fafai.com
                       </Link>
                     </p>
                   </div>
@@ -253,7 +253,7 @@ const FooterTwo = ({
                   <div className="footer__copyright-content">
                     <p className="text-center text-lg-start">
                       Copyright &copy; <span>{currentYear}</span>{" "}
-                      <Link href="/">Lvup</Link>. All rights reserved.
+                      <Link href="/">Fafai</Link>. All rights reserved.
                     </p>
                   </div>
                 </div>

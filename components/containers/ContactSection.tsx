@@ -23,7 +23,7 @@ const ContactSection = () => {
               </h2>
               <p className="mt-25">
                 Get in touch for questions, feedback, or account support. The
-                LVUP team is here to help.
+                FAFAI team is here to help.
               </p>
             </div>
           </div>
@@ -70,10 +70,10 @@ const ContactSection = () => {
                   <h6 className="fw-6 mb-5">Email Address</h6>
                   <div className="content-group">
                     <p>
-                      <a href="mailto:support@lvup.app">support@lvup.app</a>
+                      <a href="mailto:support@fafai.app">support@fafai.app</a>
                     </p>
                     <p className="mt-4">
-                      <a href="mailto:contact@lvup.app">contact@lvup.app</a>
+                      <a href="mailto:contact@fafai.app">contact@fafai.app</a>
                     </p>
                   </div>
                 </div>

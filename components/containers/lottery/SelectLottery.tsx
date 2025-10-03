@@ -32,7 +32,7 @@ const SelectLottery = () => {
           <div className="col-12 col-lg-5 col-xl-4 col-xxl-4 offset-xxl-2">
             <div className="section__content-right">
               <p>
-                Explore our featured games at Lvup, where every spin and every
+                Explore our featured games at Fafai, where every spin and every
                 bet brings you closer to huge...
               </p>
               <div className="mt-25">

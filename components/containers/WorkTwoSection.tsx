@@ -39,7 +39,7 @@ const WorkTwoSection = () => {
                 <div className="content mt-25">
                   <h6 className="fw-6">Sign Up Instantly</h6>
                   <p className="text-sm mt-12">
-                    Create your Lvup account in just a few minutes. Simply
+                    Create your Fafai account in just a few minutes. Simply
                     register
                   </p>
                 </div>

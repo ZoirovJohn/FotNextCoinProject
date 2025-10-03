@@ -24,13 +24,13 @@ const RecentChampions = () => {
               data-aos-duration="600"
             >
               <span className="fw-6 secondary-text text-xl">
-                <strong>LVUPCoin</strong> — Live Payouts
+                <strong>FAFAICoin</strong> — Live Payouts
               </span>
               <h2 className="title-animation fw-6 mt-25">
                 Recent Champions, Paid Instantly
               </h2>
               <p className="mt-25">
-                Watch real-time wins powered by <strong>LVUPCoin</strong>. From
+                Watch real-time wins powered by <strong>FAFAICoin</strong>. From
                 epic streaks to last-minute victories, players are cashing out
                 instantly with borderless crypto payments.
               </p>

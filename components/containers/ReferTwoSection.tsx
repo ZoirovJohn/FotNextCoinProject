@@ -29,7 +29,7 @@ const ReferTwoSection = () => {
                   Boost Your Earnings with <span>Referrals</span>
                 </h2>
                 <p className="mt-16">
-                  Invite your friends to LVUP and unlock rewards together. Our
+                  Invite your friends to FAFAI and unlock rewards together. Our
                   Refer & Earn program lets you earn every time your network
                   grows and engages with the platform.
                 </p>

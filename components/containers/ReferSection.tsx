@@ -30,13 +30,13 @@ const ReferSection = ({ layout = "one" }: ReferProps) => {
             >
               <div className="section__content text-start">
                 <span className="fw-6 secondary-text text-xl">
-                  <strong>Lvup,</strong> Blockchain Solutions
+                  <strong>Fafai,</strong> Blockchain Solutions
                 </span>
                 <h2 className="title-animation fw-6 mt-25">
                   Building a <span>World Without Economic Boundaries</span>
                 </h2>
                 <p className="mt-16">
-                  Lvup delivers information and value through blockchain-based
+                  Fafai delivers information and value through blockchain-based
                   internet solutions, enabling economic opportunities to spread
                   more equitably across borders.
                 </p>
@@ -49,9 +49,9 @@ const ReferSection = ({ layout = "one" }: ReferProps) => {
                     Financial Access
                   </p>
                   <p className="text-sm mt-8">
-                    Lvup supports global businesses, individuals, and developers
-                    to move, manage, and distribute value while transitioning to
-                    blockchain-based systems.
+                    Fafai supports global businesses, individuals, and
+                    developers to move, manage, and distribute value while
+                    transitioning to blockchain-based systems.
                   </p>
                 </div>
 
@@ -77,7 +77,7 @@ const ReferSection = ({ layout = "one" }: ReferProps) => {
                     Innovative Crypto Solutions
                   </p>
                   <p className="text-sm mt-8">
-                    Lvup ensures no one is left behind by providing secure,
+                    Fafai ensures no one is left behind by providing secure,
                     connected, and compliant crypto solutions, including
                     real-time cross-border payments and digital asset custody.
                   </p>
@@ -91,7 +91,7 @@ const ReferSection = ({ layout = "one" }: ReferProps) => {
                   title="join now"
                   className="btn--primary"
                 >
-                  Explore Lvup <i className="ti ti-arrow-narrow-right"></i>
+                  Explore Fafai <i className="ti ti-arrow-narrow-right"></i>
                 </Link>
               </div>
             </div>
@@ -107,7 +107,7 @@ const ReferSection = ({ layout = "one" }: ReferProps) => {
               >
                 <Image
                   src={one}
-                  alt="Lvup blockchain solutions illustration"
+                  alt="Fafai blockchain solutions illustration"
                   loading="lazy"
                   sizes="(max-width: 1200px) 50vw, 520px"
                 />

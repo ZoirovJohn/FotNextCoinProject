@@ -20,7 +20,7 @@ const BlogSectionTwo = () => {
               data-aos-duration="600"
             >
               <span className="fw-6 secondary-text text-xl">
-                <strong>Lvup,</strong> Insights & Innovations
+                <strong>Fafai,</strong> Insights & Innovations
               </span>
               <h2
                 className="title-animation fw-6 mt-25"
@@ -29,7 +29,7 @@ const BlogSectionTwo = () => {
                 Expanding Financial Access through Gaming & Blockchain
               </h2>
               <p className="mt-25">
-                Discover how Lvup leverages blockchain and cryptocurrency to
+                Discover how Fafai leverages blockchain and cryptocurrency to
                 create inclusive financial opportunities worldwide. From gaming
                 as a bridge to crypto ecosystems, explore our solutions,
                 insights, and global initiatives that drive economic

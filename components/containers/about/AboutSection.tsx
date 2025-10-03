@@ -25,10 +25,10 @@ const AboutSection = () => {
                   className="title-animation fw-6 mt-25"
                   style={{ textTransform: "none" }}
                 >
-                  Take Control of Your Finances with <span>LVUP</span>
+                  Take Control of Your Finances with <span>FAFAI</span>
                 </h2>
                 <p className="mt-25">
-                  LVUP is a fast, secure, and intuitive global wallet.
+                  FAFAI is a fast, secure, and intuitive global wallet.
                   Effortlessly send, receive, and manage your digital assets
                   while enjoying a seamless modern experience.
                 </p>
@@ -88,8 +88,8 @@ const AboutSection = () => {
               <div className="mt-40">
                 <Link
                   href="/sign-up"
-                  aria-label="Create your LVUP account"
-                  title="Create your LVUP account"
+                  aria-label="Create your FAFAI account"
+                  title="Create your FAFAI account"
                   className="btn--primary"
                 >
                   Get Started <i className="ti ti-arrow-narrow-right"></i>
@@ -116,7 +116,7 @@ const AboutSection = () => {
               <div className="thumb">
                 <Image
                   src={two}
-                  alt="LVUP wallet app mockup"
+                  alt="FAFAI wallet app mockup"
                   data-aos="zoom-in"
                   data-aos-duration="600"
                   data-aos-delay="200"

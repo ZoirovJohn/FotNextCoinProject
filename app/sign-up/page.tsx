@@ -11,21 +11,21 @@ const ClientWrapper = dynamic(
 );
 
 export const generateMetadata = async (): Promise<Metadata> => ({
-  title: "Sign Up | LVUP",
-  description: "Join LVUP — a streamlined experience built for our community.",
-  keywords: ["lvup", "signup", "account", "community"],
+  title: "Sign Up | FAFAI",
+  description: "Join FAFAI — a streamlined experience built for our community.",
+  keywords: ["fafai", "signup", "account", "community"],
   openGraph: {
-    title: "LVUP",
-    description: "Create your LVUP account and get started.",
+    title: "FAFAI",
+    description: "Create your FAFAI account and get started.",
     url: "/signup",
-    siteName: "LVUP",
+    siteName: "FAFAI",
     images: [
       {
-        // TODO: ensure this image exists in /public/images/lvup/
-        url: "/images/lvup/og-image.png",
+        // TODO: ensure this image exists in /public/images/fafai/
+        url: "/images/fafai/og-image.png",
         width: 1200,
         height: 630,
-        alt: "LVUP",
+        alt: "FAFAI",
       },
     ],
     type: "website",

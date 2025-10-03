@@ -57,13 +57,13 @@ const DiscoverSection = () => {
             >
               <div className="section__content text-start">
                 <span className="fw-6 secondary-text text-xl">
-                  <strong>Why,</strong> Choose Lvup!
+                  <strong>Why,</strong> Choose Fafai!
                 </span>
                 <h2 className="title-animation fw-6 mt-25">
                   Discover the Future of <span>Financial Inclusion</span>
                 </h2>
                 <p className="mt-25">
-                  Lvup delivers information and value through blockchain-based
+                  Fafai delivers information and value through blockchain-based
                   internet solutions, enabling economic opportunities to spread
                   more equitably across borders. By serving as a bridge between
                   gaming and finance, we empower people to participate in the
@@ -79,7 +79,7 @@ const DiscoverSection = () => {
                   <div className="content">
                     <h6 className="fw-6">Cross-Border Payments</h6>
                     <p className="text-sm mt-8">
-                      Lvup enables fast, secure, and low-cost international
+                      Fafai enables fast, secure, and low-cost international
                       payments by integrating stablecoins and cryptocurrencies
                       into real-time transactions. Users can freely move value
                       across borders while converting between fiat and crypto
@@ -95,7 +95,7 @@ const DiscoverSection = () => {
                   <div className="content">
                     <h6 className="fw-6">Inclusive Financial Access</h6>
                     <p className="text-sm mt-8">
-                      With nearly 1.4 billion people unbanked worldwide, Lvup
+                      With nearly 1.4 billion people unbanked worldwide, Fafai
                       leverages blockchain to expand accessibility. From
                       remittances in emerging markets to new digital asset
                       solutions, we’re building a fairer and more inclusive

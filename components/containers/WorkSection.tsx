@@ -19,9 +19,9 @@ const WorkSection = () => {
               <span className="fw-6 secondary-text text-xl">
                 <strong>Step,</strong> into the Future
               </span>
-              <h2 className="title-animation fw-6 mt-25">How Lvup Works</h2>
+              <h2 className="title-animation fw-6 mt-25">How Fafai Works</h2>
               <p className="mt-16">
-                Lvup combines gaming with blockchain to create an inclusive
+                Fafai combines gaming with blockchain to create an inclusive
                 financial ecosystem. Players naturally earn tokens, access
                 crypto tools, and participate in global digital finance, opening
                 new economic opportunities.
@@ -50,7 +50,7 @@ const WorkSection = () => {
               <div className="content mt-25">
                 <h6 className="fw-6">Play & Earn Tokens</h6>
                 <p className="text-sm mt-12">
-                  Engage in games while earning LVUP tokens. Each action
+                  Engage in games while earning FAFAI tokens. Each action
                   connects you to blockchain-based rewards and financial tools.
                 </p>
               </div>

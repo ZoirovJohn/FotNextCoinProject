@@ -23,14 +23,14 @@ const HeroSectionTwo = () => {
           <div className="col-12 col-lg-7 col-xl-7">
             <div className="banner-three__content">
               <span className="fw-6 secondary-text text-xl sub-title">
-                <strong>Empower,</strong> Connect, and Grow with Lvup
+                <strong>Empower,</strong> Connect, and Grow with Fafai
               </span>
               <h1 className="fw-7 mt-25">
                 The Future of{" "}
                 <span className="primary-text">Global Finance</span>
               </h1>
               <p className="text-xl mt-30">
-                Lvup is building a world without economic boundaries. Through
+                Fafai is building a world without economic boundaries. Through
                 blockchain-based internet solutions, we deliver value and
                 opportunity more equitably across borders. From gaming
                 communities to global businesses, we serve as a bridge to

@@ -29,8 +29,9 @@ const HeroSection = () => {
                 Win Weekly Lottery Draws, Risk-Free
               </h1>
               <p className="text-xl mt-25">
-                Welcome to Lvup, the ultimate online gaming platform where every
-                bet you place brings you closer to winning real cryptocurrency!
+                Welcome to Fafai, the ultimate online gaming platform where
+                every bet you place brings you closer to winning real
+                cryptocurrency!
               </p>
               <div className="banner-action mt-40">
                 <Link

@@ -131,7 +131,7 @@ const RecentChampionTab = () => {
                                   </th>
                                   <th>
                                     <div className="th-wrap">
-                                      Amount (LVUP){" "}
+                                      Amount (FAFAI){" "}
                                       <span aria-hidden="true">
                                         <i className="fa-solid fa-caret-up"></i>
                                         <i className="fa-solid fa-caret-down"></i>
@@ -140,7 +140,7 @@ const RecentChampionTab = () => {
                                   </th>
                                   <th>
                                     <div className="th-wrap">
-                                      Profit (LVUP){" "}
+                                      Profit (FAFAI){" "}
                                       <span aria-hidden="true">
                                         <i className="fa-solid fa-caret-up"></i>
                                         <i className="fa-solid fa-caret-down"></i>

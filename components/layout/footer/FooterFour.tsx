@@ -11,7 +11,7 @@ const FooterFour = () => {
               <div className="footer__copyright-content">
                 <p className="text-center text-lg-start">
                   Copyright &copy; <span>{currentYear}</span>{" "}
-                  <Link href="/">Lvup</Link>. All rights reserved.
+                  <Link href="/">Fafai</Link>. All rights reserved.
                 </p>
               </div>
             </div>

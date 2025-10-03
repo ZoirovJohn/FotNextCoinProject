@@ -14,15 +14,15 @@ const chakraPetch = Chakra_Petch({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://lvup.netlify.app"),
+  metadataBase: new URL("https://fafai.netlify.app"),
 
   title: {
-    default: "Lvup | Online Crypto Gaming & Lottery",
-    template: "%s | Lvup",
+    default: "Fafai | Online Crypto Gaming & Lottery",
+    template: "%s | Fafai",
   },
 
   description:
-    "Official Lvup crypto gaming & lottery template - powered by React & Next.js",
+    "Official Fafai crypto gaming & lottery template - powered by React & Next.js",
   keywords: ["crypto", "game", "casino", "betting", "affiliate"],
 
   authors: [
@@ -34,17 +34,17 @@ export const metadata: Metadata = {
 
   icons: { icon: "/favicon.ico" },
 
-  alternates: { canonical: "https://lvup.netlify.app/" },
+  alternates: { canonical: "https://fafai.netlify.app/" },
 
   openGraph: {
-    url: "https://lvup.netlify.app/",
-    siteName: "Lvup",
+    url: "https://fafai.netlify.app/",
+    siteName: "Fafai",
     images: [
       {
         url: "/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Lvup Crypto Gaming Preview",
+        alt: "Fafai Crypto Gaming Preview",
       },
     ],
     type: "website",

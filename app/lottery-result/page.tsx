@@ -10,21 +10,21 @@ const ClientWrapper = dynamic(
 );
 
 export const generateMetadata = async (): Promise<Metadata> => ({
-  title: "Lottery Result | Lvup - Online Crypto Gaming",
+  title: "Lottery Result | Fafai - Online Crypto Gaming",
   description:
-    "Welcome to Lvup - the ultimate crypto gaming & lottery experience.",
-  keywords: ["crypto gaming", "lottery", "lvup", "casino", "blockchain"],
+    "Welcome to Fafai - the ultimate crypto gaming & lottery experience.",
+  keywords: ["crypto gaming", "lottery", "fafai", "casino", "blockchain"],
   openGraph: {
-    title: "Lvup - Crypto Gaming & Lottery",
+    title: "Fafai - Crypto Gaming & Lottery",
     description: "Experience seamless blockchain - based gaming and lotteries.",
-    url: "https://lvup.netlify.app/",
-    siteName: "Lvup",
+    url: "https://fafai.netlify.app/",
+    siteName: "Fafai",
     images: [
       {
         url: "/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Lvup Crypto Gaming",
+        alt: "Fafai Crypto Gaming",
       },
     ],
     type: "website",
