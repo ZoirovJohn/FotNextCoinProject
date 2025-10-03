@@ -9,14 +9,14 @@ import ClientWrapper from "@/components/widgets/ClientWrapper";
 
 export const generateMetadata = async (): Promise<Metadata> => ({
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://omad.example"
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://lvup.example"
   ),
   alternates: { canonical: "/contact-us" },
-  title: "Contact Us | OMAD — Borderless Digital Payments",
+  title: "Contact Us | LVUP — Borderless Digital Payments",
   description:
-    "Get in touch with OMAD — a fast, secure, global wallet for digital assets and everyday payments.",
+    "Get in touch with LVUP — a fast, secure, global wallet for digital assets and everyday payments.",
   keywords: [
-    "OMAD",
+    "LVUP",
     "digital wallet",
     "payments",
     "crypto",
@@ -24,26 +24,26 @@ export const generateMetadata = async (): Promise<Metadata> => ({
     "remittance",
   ],
   openGraph: {
-    title: "OMAD — Borderless Digital Payments",
+    title: "LVUP — Borderless Digital Payments",
     description:
-      "Experience fast, secure, blockchain-based payments with OMAD.",
+      "Experience fast, secure, blockchain-based payments with LVUP.",
     url: "/contact-us",
-    siteName: "OMAD",
+    siteName: "LVUP",
     images: [
       {
         url: "/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "OMAD Open Graph Image",
+        alt: "LVUP Open Graph Image",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "OMAD — Borderless Digital Payments",
+    title: "LVUP — Borderless Digital Payments",
     description:
-      "Experience fast, secure, blockchain-based payments with OMAD.",
+      "Experience fast, secure, blockchain-based payments with LVUP.",
     images: ["/images/og-image.png"],
   },
   robots: { index: true, follow: true },
@@ -53,7 +53,7 @@ const Page = () => {
   return (
     <div className="page-wrapper a-cursor">
       <Header />
-      <Breadcrumb title="Contact OMAD" />
+      <Breadcrumb title="Contact LVUP" />
       <ContactSection />
       <ContactMap />
       <FooterTwo layout="two" showNewsletter={false} />

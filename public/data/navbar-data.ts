@@ -27,10 +27,6 @@ const NavbarData = [
     path: "crypto",
   },
   {
-    title: "Business Solutions",
-    path: "contact-us",
-  },
-  {
     title: "About Us",
     path: "about-us",
   },

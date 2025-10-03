@@ -8,21 +8,21 @@ const ClientWrapper = dynamic(
 );
 
 export const generateMetadata = async (): Promise<Metadata> => ({
-  title: "Sign In | Betwins - Online Crypto Gaming",
+  title: "Sign In | Lvup - Online Crypto Gaming",
   description:
-    "Welcome to Betwins - the ultimate crypto gaming & lottery experience.",
-  keywords: ["crypto gaming", "lottery", "betwins", "casino", "blockchain"],
+    "Welcome to Lvup - the ultimate crypto gaming & lottery experience.",
+  keywords: ["crypto gaming", "lottery", "lvup", "casino", "blockchain"],
   openGraph: {
-    title: "Betwins - Crypto Gaming & Lottery",
+    title: "Lvup - Crypto Gaming & Lottery",
     description: "Experience seamless blockchain - based gaming and lotteries.",
-    url: "https://betwins.netlify.app/",
-    siteName: "Betwins",
+    url: "https://lvup.netlify.app/",
+    siteName: "Lvup",
     images: [
       {
         url: "/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Betwins Crypto Gaming",
+        alt: "Lvup Crypto Gaming",
       },
     ],
     type: "website",

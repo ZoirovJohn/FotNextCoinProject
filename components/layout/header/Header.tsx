@@ -40,7 +40,7 @@ const Header = ({ showTopGames = true }: HeaderProps) => {
                         <Image src={logo} alt="Image" />
                       </Link>
                     </div>
-                    {showTopGames && <TopGames />}
+                    {/* {showTopGames && <TopGames />} */}
                   </div>
 
                   <div className="navbar__menu d-none d-xl-block">

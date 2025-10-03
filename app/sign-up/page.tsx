@@ -11,21 +11,21 @@ const ClientWrapper = dynamic(
 );
 
 export const generateMetadata = async (): Promise<Metadata> => ({
-  title: "Sign Up | OMAD",
-  description: "Join OMAD — a streamlined experience built for our community.",
-  keywords: ["omad", "signup", "account", "community"],
+  title: "Sign Up | LVUP",
+  description: "Join LVUP — a streamlined experience built for our community.",
+  keywords: ["lvup", "signup", "account", "community"],
   openGraph: {
-    title: "OMAD",
-    description: "Create your OMAD account and get started.",
+    title: "LVUP",
+    description: "Create your LVUP account and get started.",
     url: "/signup",
-    siteName: "OMAD",
+    siteName: "LVUP",
     images: [
       {
-        // TODO: ensure this image exists in /public/images/omad/
-        url: "/images/omad/og-image.png",
+        // TODO: ensure this image exists in /public/images/lvup/
+        url: "/images/lvup/og-image.png",
         width: 1200,
         height: 630,
-        alt: "OMAD",
+        alt: "LVUP",
       },
     ],
     type: "website",

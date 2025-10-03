@@ -23,14 +23,14 @@ const HeroSectionTwo = () => {
           <div className="col-12 col-lg-7 col-xl-7">
             <div className="banner-three__content">
               <span className="fw-6 secondary-text text-xl sub-title">
-                <strong>Bank,</strong> Trade, and Grow with Omad
+                <strong>Bank,</strong> Trade, and Grow with Lvup
               </span>
               <h1 className="fw-7 mt-25">
                 The Future of{" "}
                 <span className="primary-text">Banking & Crypto</span>
               </h1>
               <p className="text-xl mt-30">
-                Welcome to Omad — your all-in-one platform for seamless digital
+                Welcome to Lvup — your all-in-one platform for seamless digital
                 banking and cryptocurrency services. Manage multi-currency
                 accounts, send fast transfers, and trade top digital assets
                 securely, all in one place.

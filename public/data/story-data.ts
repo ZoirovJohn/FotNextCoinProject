@@ -11,7 +11,7 @@ const StoryData = [
     authorHandle: "-Denial Malan (@malan)",
     date: "July 25, 2025",
     quote:
-      "Betwins is hands down the best crypto gaming platform I've used! I've won big on several games, and the payouts were instant. Can't recommend it enough!",
+      "Lvup is hands down the best crypto gaming platform I've used! I've won big on several games, and the payouts were instant. Can't recommend it enough!",
     image: one,
     alt: "Kiss Laura",
     stars: 5,
@@ -23,7 +23,7 @@ const StoryData = [
     authorHandle: "-Denial Malan (@malan)",
     date: "July 25, 2025",
     quote:
-      "Betwins is hands down the best crypto gaming platform I've used! I've won big on several games. Can't recommend it enough!",
+      "Lvup is hands down the best crypto gaming platform I've used! I've won big on several games. Can't recommend it enough!",
     image: two,
     alt: "Cody Fisher",
     stars: 5,
@@ -47,7 +47,7 @@ const StoryData = [
     authorHandle: "-Denial Malan (@malan)",
     date: "July 25, 2025",
     quote:
-      "Betwins is hands down the best crypto gaming platform I've used! I've won big on several games, and the payouts were instant. Can't recommend it enough!",
+      "Lvup is hands down the best crypto gaming platform I've used! I've won big on several games, and the payouts were instant. Can't recommend it enough!",
     image: four,
     alt: "Guy Hawkins",
     stars: 5,
@@ -59,7 +59,7 @@ const StoryData = [
     authorHandle: "-Denial Malan (@malan)",
     date: "July 25, 2025",
     quote:
-      "Betwins is hands down the best crypto gaming platform I've used! I've won big on several games, and the payouts were instant. Can't recommend it enough!",
+      "Lvup is hands down the best crypto gaming platform I've used! I've won big on several games, and the payouts were instant. Can't recommend it enough!",
     image: one,
     alt: "Kiss Laura",
     stars: 5,
@@ -71,7 +71,7 @@ const StoryData = [
     authorHandle: "-Denial Malan (@malan)",
     date: "July 25, 2025",
     quote:
-      "Betwins is hands down the best crypto gaming platform I've used! I've won big on several games. Can't recommend it enough!",
+      "Lvup is hands down the best crypto gaming platform I've used! I've won big on several games. Can't recommend it enough!",
     image: two,
     alt: "Cody Fisher",
     stars: 5,
@@ -95,7 +95,7 @@ const StoryData = [
     authorHandle: "-Denial Malan (@malan)",
     date: "July 25, 2025",
     quote:
-      "Betwins is hands down the best crypto gaming platform I've used! I've won big on several games, and the payouts were instant. Can't recommend it enough!",
+      "Lvup is hands down the best crypto gaming platform I've used! I've won big on several games, and the payouts were instant. Can't recommend it enough!",
     image: four,
     alt: "Guy Hawkins",
     stars: 5,

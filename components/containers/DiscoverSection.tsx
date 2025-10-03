@@ -57,13 +57,13 @@ const DiscoverSection = () => {
             >
               <div className="section__content text-start">
                 <span className="fw-6 secondary-text text-xl">
-                  <strong>Why,</strong> Choose Omad!
+                  <strong>Why,</strong> Choose Lvup!
                 </span>
                 <h2 className="title-animation fw-6 mt-25">
                   Discover the Future of <span>Banking & Crypto</span>
                 </h2>
                 <p className="mt-25">
-                  Omad combines the reliability of digital banking with the
+                  Lvup combines the reliability of digital banking with the
                   innovation of cryptocurrency. Manage your money securely,
                   transfer globally, and trade top digital assets — all in one
                   seamless platform.

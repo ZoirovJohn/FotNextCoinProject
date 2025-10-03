@@ -71,7 +71,7 @@ const ChooseSection = ({ layout = "one" }: ChooseProps) => {
                   Trusted Platform for Secure <span>Digital</span> Payments
                 </h2>
                 <p className="mt-25">
-                  OMAD puts security and simplicity first. Send and receive
+                  LVUP puts security and simplicity first. Send and receive
                   value globally with a fast, modern experience built for
                   everyday payments.
                 </p>
@@ -121,7 +121,7 @@ const ChooseSection = ({ layout = "one" }: ChooseProps) => {
               <div className="mt-40">
                 <Link
                   href="/terms-conditions"
-                  aria-label="Read more about OMAD"
+                  aria-label="Read more about LVUP"
                   title="Read more"
                   className="btn--primary"
                 >

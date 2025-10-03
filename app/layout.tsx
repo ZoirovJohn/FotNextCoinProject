@@ -14,15 +14,15 @@ const chakraPetch = Chakra_Petch({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://betwins.netlify.app"),
+  metadataBase: new URL("https://lvup.netlify.app"),
 
   title: {
-    default: "Betwins | Online Crypto Gaming & Lottery",
-    template: "%s | Betwins",
+    default: "Lvup | Online Crypto Gaming & Lottery",
+    template: "%s | Lvup",
   },
 
   description:
-    "Official Betwins crypto gaming & lottery template - powered by React & Next.js",
+    "Official Lvup crypto gaming & lottery template - powered by React & Next.js",
   keywords: ["crypto", "game", "casino", "betting", "affiliate"],
 
   authors: [
@@ -34,17 +34,17 @@ export const metadata: Metadata = {
 
   icons: { icon: "/favicon.ico" },
 
-  alternates: { canonical: "https://betwins.netlify.app/" },
+  alternates: { canonical: "https://lvup.netlify.app/" },
 
   openGraph: {
-    url: "https://betwins.netlify.app/",
-    siteName: "Betwins",
+    url: "https://lvup.netlify.app/",
+    siteName: "Lvup",
     images: [
       {
         url: "/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Betwins Crypto Gaming Preview",
+        alt: "Lvup Crypto Gaming Preview",
       },
     ],
     type: "website",

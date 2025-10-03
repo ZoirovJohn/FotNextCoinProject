@@ -26,11 +26,11 @@ const StorySection = ({ layout = "one" }: StoryProps) => {
                 <strong>What,</strong> Our Players Say
               </span>
               <h2 className="title-animation fw-6 mt-25">
-                Real Stories from the OMADCoin Community
+                Real Stories from the LVUPCoin Community
               </h2>
               <p className="mt-25">
                 These are authentic experiences from players using{" "}
-                <strong>OMADCoin</strong> for fast, simple, and secure gameplay
+                <strong>LVUPCoin</strong> for fast, simple, and secure gameplay
                 rewards. Your wins, your wallet—on your terms.
               </p>
             </div>

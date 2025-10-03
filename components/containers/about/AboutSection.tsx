@@ -25,10 +25,10 @@ const AboutSection = () => {
                   className="title-animation fw-6 mt-25"
                   style={{ textTransform: "none" }}
                 >
-                  Manage Your Money with <span>OMAD</span>
+                  Manage Your Money with <span>LVUP</span>
                 </h2>
                 <p className="mt-25">
-                  OMAD is a fast, secure, and global wallet. Send, receive, and
+                  LVUP is a fast, secure, and global wallet. Send, receive, and
                   manage digital assets with confidence in a simple, modern
                   experience.
                 </p>
@@ -88,8 +88,8 @@ const AboutSection = () => {
               <div className="mt-40">
                 <Link
                   href="/sign-up"
-                  aria-label="Create your OMAD account"
-                  title="Create your OMAD account"
+                  aria-label="Create your LVUP account"
+                  title="Create your LVUP account"
                   className="btn--primary"
                 >
                   Get Started <i className="ti ti-arrow-narrow-right"></i>
@@ -116,7 +116,7 @@ const AboutSection = () => {
               <div className="thumb">
                 <Image
                   src={two}
-                  alt="OMAD wallet app mockup"
+                  alt="LVUP wallet app mockup"
                   data-aos="zoom-in"
                   data-aos-duration="600"
                   data-aos-delay="200"

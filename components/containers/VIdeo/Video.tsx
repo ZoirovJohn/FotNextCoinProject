@@ -20,7 +20,7 @@ export default function Video() {
   return (
     <div
       style={{
-        backgroundColor: "#30312eff",
+        backgroundColor: "#000000ff",
         height: "100vh",
         width: "100vw",
         display: "flex",

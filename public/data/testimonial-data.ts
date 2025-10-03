@@ -9,7 +9,7 @@ const TestimonialData = [
     name: "Kiss Laura",
     role: "Product Designer",
     content:
-      "Betwins is hands down the best crypto gaming platform I've used! I'&apos;'ve won big on several games, and the payouts were instant. Can't recommend it enough!",
+      "Lvup is hands down the best crypto gaming platform I've used! I'&apos;'ve won big on several games, and the payouts were instant. Can't recommend it enough!",
   },
   {
     id: 1,
@@ -17,7 +17,7 @@ const TestimonialData = [
     name: "STEVEN FRANZEN",
     role: "Product Designer",
     content:
-      "Betwins is hands down the best crypto gaming platform I've used! I'&apos;'ve won big on several games, and the payouts were instant. Can't recommend it enough!",
+      "Lvup is hands down the best crypto gaming platform I've used! I'&apos;'ve won big on several games, and the payouts were instant. Can't recommend it enough!",
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const TestimonialData = [
     name: "FRAZAN WILLIAMSON",
     role: "Product Designer",
     content:
-      "Betwins is hands down the best crypto gaming platform I've used! I'&apos;'ve won big on several games, and the payouts were instant. Can't recommend it enough!",
+      "Lvup is hands down the best crypto gaming platform I've used! I'&apos;'ve won big on several games, and the payouts were instant. Can't recommend it enough!",
   },
 ];
 

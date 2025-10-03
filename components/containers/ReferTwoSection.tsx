@@ -29,7 +29,7 @@ const ReferTwoSection = () => {
                   Maximize Your Earnings with <span>Referrals</span>
                 </h2>
                 <p className="mt-16">
-                  Earn more with OMAD by inviting friends. Our Refer &amp; Earn
+                  Earn more with LVUP by inviting friends. Our Refer &amp; Earn
                   program rewards you when your referrals join and start using
                   the wallet.
                 </p>
@@ -52,7 +52,7 @@ const ReferTwoSection = () => {
                 <div className="refer__content-single">
                   <p className="text-xl fw-5">
                     <i className="fa-solid fa-circle-arrow-right"></i> Instant
-                    OMAD Payouts
+                    LVUP Payouts
                   </p>
                   <p className="text-sm mt-8">
                     Receive referral bonuses instantly after each successful

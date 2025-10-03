@@ -38,7 +38,7 @@ const ReferSection = ({ layout = "one" }: ReferProps) => {
                 <p className="mt-16">
                   Your journey doesn&apos;t end at gameplay—earn more by
                   inviting friends. Our Refer &amp; Earn program rewards you for
-                  every successful referral, paid out in OMADCoin.
+                  every successful referral, paid out in LVUPCoin.
                 </p>
               </div>
 
@@ -59,7 +59,7 @@ const ReferSection = ({ layout = "one" }: ReferProps) => {
                 <div className="refer__content-single">
                   <p className="text-xl fw-5">
                     <i className="fa-solid fa-circle-arrow-right"></i> Instant
-                    OMADCoin Payouts
+                    LVUPCoin Payouts
                   </p>
                   <p className="text-sm mt-8">
                     Receive referral bonuses instantly after each successful

@@ -30,8 +30,8 @@ const Footer = () => {
               </div>
               <div className="footer__widget-content mt-25">
                 <p>
-                  Betwins is an innovative Online Crypto Gaming platform
-                  designed for players.
+                  Lvup is an innovative Online Crypto Gaming platform designed
+                  for players.
                 </p>
               </div>
               <div className="social mt-35">
@@ -193,13 +193,13 @@ const Footer = () => {
                   </div>
                   <div className="content">
                     <p>
-                      <Link href="mailto:example@betwins.com">
-                        example@betwins.com
+                      <Link href="mailto:example@lvup.com">
+                        example@lvup.com
                       </Link>
                     </p>
                     <p className="mt-4">
-                      <Link href="mailto:contact@betwins.com">
-                        contact@betwins.com
+                      <Link href="mailto:contact@lvup.com">
+                        contact@lvup.com
                       </Link>
                     </p>
                   </div>
@@ -231,7 +231,7 @@ const Footer = () => {
                   <div className="footer__copyright-content">
                     <p className="text-center text-lg-start">
                       Copyright &copy; <span>{currentYear}</span>{" "}
-                      <Link href="/">Betwins</Link>. All rights reserved.
+                      <Link href="/">Lvup</Link>. All rights reserved.
                     </p>
                   </div>
                 </div>

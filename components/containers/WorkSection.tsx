@@ -19,9 +19,9 @@ const WorkSection = () => {
               <span className="fw-6 secondary-text text-xl">
                 <strong>Step,</strong> by Step Process
               </span>
-              <h2 className="title-animation fw-6 mt-25">How Omad Works</h2>
+              <h2 className="title-animation fw-6 mt-25">How Lvup Works</h2>
               <p className="mt-16">
-                Getting started with Omad is simple. In just a few steps you can
+                Getting started with Lvup is simple. In just a few steps you can
                 open an account, fund it with crypto or fiat, and start managing
                 your finances globally with ease.
               </p>
@@ -47,7 +47,7 @@ const WorkSection = () => {
               <div className="content mt-25">
                 <h6 className="fw-6">Sign Up Instantly</h6>
                 <p className="text-sm mt-12">
-                  Create your Omad account in minutes using your email and
+                  Create your Lvup account in minutes using your email and
                   secure verification. No lengthy paperwork — just fast and
                   simple onboarding.
                 </p>
@@ -94,7 +94,7 @@ const WorkSection = () => {
               <div className="content mt-25">
                 <h6 className="fw-6">Bank, Trade & Grow</h6>
                 <p className="text-sm mt-12">
-                  Use Omad to send and receive money globally, trade digital
+                  Use Lvup to send and receive money globally, trade digital
                   assets securely, and access multi-currency services — all in
                   one platform.
                 </p>

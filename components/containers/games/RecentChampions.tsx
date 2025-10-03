@@ -24,13 +24,13 @@ const RecentChampions = () => {
               data-aos-duration="600"
             >
               <span className="fw-6 secondary-text text-xl">
-                <strong>OMADCoin,</strong> Live Payouts
+                <strong>LVUPCoin,</strong> Live Payouts
               </span>
               <h2 className="title-animation fw-6 mt-25">
                 Recent Champions — Paid in Seconds
               </h2>
               <p className="mt-25">
-                Track real-time wins settled via <strong>OMADCoin</strong>. From
+                Track real-time wins settled via <strong>LVUPCoin</strong>. From
                 lucky streaks to clutch plays, players are cashing out instantly
                 with borderless crypto payouts.
               </p>
