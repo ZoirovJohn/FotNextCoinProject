@@ -1,9 +1,15 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import logo from "@/public/images/logo.png";
 import leftThumb from "@/public/images/footer/footer-two-left.png";
 import rightThumb from "@/public/images/footer/footer-two-right.png";
 import NewsletterTwo from "./NewsletterTwo";
+import { useAuth } from "@/lib/contexts/AuthContext";
+import { useRouter } from "next/navigation";
+import translations from "@/public/locals/translations";
+import { useLanguage } from "@/lib/contexts/LanguageContext";
 
 interface FooterTwoProps {
   layout?: "one" | "two";
@@ -15,6 +21,14 @@ const FooterTwo = ({
   showNewsletter = true,
 }: FooterTwoProps) => {
   const currentYear = new Date().getFullYear();
+  const { user, ready, logout } = useAuth();
+  const router = useRouter();
+  const lang = useLanguage().lang;
+
+  const handleLogout = async () => {
+    await logout();
+    router.refresh();
+  };
 
   return (
     <footer
@@ -23,7 +37,9 @@ const FooterTwo = ({
     >
       <div className="container">
         {showNewsletter && <NewsletterTwo />}
+
         <div className="row gutter-60 pt-120 pb-120">
+          {/* Logo & About */}
           <div className="col-12 col-lg-6 col-xl-3">
             <div
               className="footer__widget"
@@ -32,154 +48,154 @@ const FooterTwo = ({
             >
               <div className="footer__widget-intro">
                 <Link href="/" className="logo">
-                  <Image src={logo} alt="Image" />
+                  <Image src={logo} alt="Lvup Logo" />
                 </Link>
               </div>
               <div className="footer__widget-content mt-25">
                 <p>
                   Lvup is an innovative Online Crypto Gaming platform designed
-                  for players.
+                  for players to play, earn, and explore blockchain gaming.
                 </p>
               </div>
               <div className="social mt-35">
                 <Link
                   href="https://www.facebook.com/"
                   target="_blank"
-                  aria-label="share us on facebook"
-                  title="facebook"
+                  aria-label="Facebook"
                 >
                   <i className="fa-brands fa-facebook-f"></i>
                 </Link>
                 <Link
                   href="https://instagram.com/"
                   target="_blank"
-                  aria-label="share us on instagram"
-                  title="instagram"
+                  aria-label="Instagram"
                 >
                   <i className="fa-brands fa-instagram"></i>
                 </Link>
                 <Link
                   href="https://x.com/"
                   target="_blank"
-                  aria-label="share us on twitter"
-                  title="twitter"
+                  aria-label="Twitter"
                 >
                   <i className="fa-brands fa-twitter"></i>
                 </Link>
                 <Link
                   href="https://www.linkedin.com/"
                   target="_blank"
-                  aria-label="share us on linkedin"
-                  title="linkedin"
+                  aria-label="LinkedIn"
                 >
                   <i className="fa-brands fa-linkedin-in"></i>
                 </Link>
               </div>
             </div>
           </div>
-          <div className="col-12 col-lg-3 col-xl-2">
+
+          {/* Company */}
+          <div className="col-6 col-lg-3 col-xl-2">
             <div
               className="footer__widget"
               data-aos="fade-up"
               data-aos-duration="600"
               data-aos-delay="200"
             >
-              <div className="footer__widget-intro">
-                <h6 className="fw-6 neutral-top">Quick Links</h6>
-              </div>
-              <div className="footer__widget-content mt-25">
-                <ul>
-                  <li>
-                    <Link href="/">Home</Link>
-                  </li>
-                  <li>
-                    <Link href="about-us">About Us</Link>
-                  </li>
-                  <li>
-                    <Link href="games">Games</Link>
-                  </li>
-                  <li>
-                    <Link href="lottery">Lottery</Link>
-                  </li>
-                  <li>
-                    <Link href="blog">Blog</Link>
-                  </li>
-                </ul>
-              </div>
+              <h6 className="fw-6 neutral-top">Company</h6>
+              <ul className="mt-25">
+                <li>
+                  <Link href="/">Home</Link>
+                </li>
+                <li>
+                  <Link href="/about-us">About Us</Link>
+                </li>
+                <li>
+                  <Link href="/contact-us">Contact</Link>
+                </li>
+                <li>
+                  <Link href="/about-us#team">Team</Link>
+                </li>
+                <li>
+                  <Link href="/about-us#careers">Careers</Link>
+                </li>
+              </ul>
             </div>
           </div>
-          <div className="col-12 col-lg-3 col-xl-2">
+
+          {/* Services / Auth Links Only Changed Here */}
+          <div className="col-6 col-lg-3 col-xl-2">
             <div
               className="footer__widget"
               data-aos="fade-up"
               data-aos-duration="600"
               data-aos-delay="400"
             >
-              <div className="footer__widget-intro">
-                <h6 className="fw-6 neutral-top">Categories</h6>
-              </div>
-              <div className="footer__widget-content mt-25">
-                <ul>
+              <h6 className="fw-6 neutral-top">Services</h6>
+              <ul className="mt-25">
+                <li>
+                  <Link href="/crypto">Wallet</Link>
+                </li>
+                <li>
+                  <Link href="/crypto#markets">Markets</Link>
+                </li>
+                <li>
+                  <Link href="/crypto#guide">Getting Started</Link>
+                </li>
+                {ready && user ? (
                   <li>
-                    <Link href="lottery-contest">Jackpot</Link>
+                    <button className="btn--link p-0" onClick={handleLogout}>
+                      {translations[lang].Logout}
+                    </button>
                   </li>
-                  <li>
-                    <Link href="lottery-contest">Slots</Link>
-                  </li>
-                  <li>
-                    <Link href="lottery-contest">Casino</Link>
-                  </li>
-                  <li>
-                    <Link href="lottery-contest">Gambling</Link>
-                  </li>
-                  <li>
-                    <Link href="lottery">Lottery</Link>
-                  </li>
-                </ul>
-              </div>
+                ) : (
+                  <>
+                    <li>
+                      <Link href="/sign-up">{translations[lang].Signup}</Link>
+                    </li>
+                    <li>
+                      <Link href="/sign-in">{translations[lang].Signin}</Link>
+                    </li>
+                  </>
+                )}
+              </ul>
             </div>
           </div>
-          <div className="col-12 col-lg-6 col-xl-2">
+
+          {/* Resources */}
+          <div className="col-6 col-lg-6 col-xl-2">
             <div
               className="footer__widget"
               data-aos="fade-up"
               data-aos-duration="600"
               data-aos-delay="600"
             >
-              <div className="footer__widget-intro">
-                <h6 className="fw-6 neutral-top">Quick Links</h6>
-              </div>
-              <div className="footer__widget-content mt-25">
-                <ul>
-                  <li>
-                    <Link href="faq">FAQ&apos;s</Link>
-                  </li>
-                  <li>
-                    <Link href="contact-us">Contact Us</Link>
-                  </li>
-                  <li>
-                    <Link href="sign-up">Create Account</Link>
-                  </li>
-                  <li>
-                    <Link href="sign-in">Sign In</Link>
-                  </li>
-                  <li>
-                    <Link href="error">Error</Link>
-                  </li>
-                </ul>
-              </div>
+              <h6 className="fw-6 neutral-top">Resources</h6>
+              <ul className="mt-25">
+                <li>
+                  <Link href="/faq">FAQ</Link>
+                </li>
+                <li>
+                  <Link href="/blog">Blog</Link>
+                </li>
+                <li>
+                  <Link href="/games">Games</Link>
+                </li>
+                <li>
+                  <Link href="/lottery">Lottery</Link>
+                </li>
+                <li>
+                  <Link href="/crypto#partners">Partners</Link>
+                </li>
+              </ul>
             </div>
           </div>
-          <div className="col-12 col-lg-6 col-xl-3">
+
+          {/* Get In Touch */}
+          <div className="col-6 col-lg-6 col-xl-3">
             <div
               className="footer__widget"
               data-aos="fade-up"
               data-aos-duration="600"
               data-aos-delay="800"
             >
-              <div className="footer__widget-intro">
-                <h6 className="fw-6 neutral-top">Get In Touch</h6>
-              </div>
+              <h6 className="fw-6 neutral-top">Get In Touch</h6>
               <div className="footer__widget-content mt-25">
                 <div className="footer__widget-group">
                   <div className="icon">
@@ -217,10 +233,7 @@ const FooterTwo = ({
                   </div>
                   <div className="content">
                     <p>
-                      <Link
-                        href="https://www.google.com/maps/place/Kentucky,+USA/@37.8172108,-87.087054,8z/data=!3m1!4b1!4m6!3m5!1s0x8842734c8b1953c9:0x771f6f4ec5ccdffc!8m2!3d37.8393332!4d-84.2700179!16zL20vMDQ5OHk?entry=ttu"
-                        target="_blank"
-                      >
+                      <Link href="https://www.google.com/maps" target="_blank">
                         1901 Thornridge Cir. Shiloh, Hawaii 81063
                       </Link>
                     </p>
@@ -230,6 +243,8 @@ const FooterTwo = ({
             </div>
           </div>
         </div>
+
+        {/* Copyright */}
         <div className="row">
           <div className="col-12">
             <div className="footer__copyright">
@@ -268,8 +283,9 @@ const FooterTwo = ({
           </div>
         </div>
       </div>
+
       <div className="left-thumb" data-aos="fade-right" data-aos-duration="600">
-        <Image src={leftThumb} alt="Image" />
+        <Image src={leftThumb} alt="Decoration" />
       </div>
       <div
         className="right-thumb"
@@ -277,7 +293,7 @@ const FooterTwo = ({
         data-aos-duration="600"
         data-aos-delay="300"
       >
-        <Image src={rightThumb} alt="Image" />
+        <Image src={rightThumb} alt="Decoration" />
       </div>
     </footer>
   );

@@ -19,18 +19,18 @@ const AboutSection = () => {
             >
               <div className="section__content text-start">
                 <span className="fw-6 secondary-text text-xl">
-                  <strong>Trusted,</strong> by Thousands of Users
+                  <strong>Trusted,</strong> by Thousands Worldwide
                 </span>
                 <h2
                   className="title-animation fw-6 mt-25"
                   style={{ textTransform: "none" }}
                 >
-                  Manage Your Money with <span>LVUP</span>
+                  Take Control of Your Finances with <span>LVUP</span>
                 </h2>
                 <p className="mt-25">
-                  LVUP is a fast, secure, and global wallet. Send, receive, and
-                  manage digital assets with confidence in a simple, modern
-                  experience.
+                  LVUP is a fast, secure, and intuitive global wallet.
+                  Effortlessly send, receive, and manage your digital assets
+                  while enjoying a seamless modern experience.
                 </p>
               </div>
 
@@ -44,8 +44,8 @@ const AboutSection = () => {
                   <div className="content">
                     <h6 className="fw-6">Bank-Grade Security</h6>
                     <p className="text-sm mt-8">
-                      Advanced safeguards and best practices to help keep your
-                      assets protected.
+                      Industry-standard safeguards to protect your funds and
+                      personal information at all times.
                     </p>
                   </div>
                 </div>
@@ -59,8 +59,8 @@ const AboutSection = () => {
                   <div className="content">
                     <h6 className="fw-6">Instant Transfers</h6>
                     <p className="text-sm mt-8">
-                      Move value globally in seconds with transparent,
-                      predictable fees.
+                      Move your assets globally in seconds with clear and
+                      predictable fees, anytime, anywhere.
                     </p>
                   </div>
                 </div>
@@ -69,19 +69,19 @@ const AboutSection = () => {
               <ul className="list-group-row mt-40">
                 <li>
                   <i className="ti ti-check" aria-hidden="true"></i>
-                  Multi-currency support
+                  Support for multiple currencies
                 </li>
                 <li>
-                  <i className="ti ti-check" aria-hidden="true"></i>Simple,
-                  modern UI
+                  <i className="ti ti-check" aria-hidden="true"></i>
+                  Clean, modern user interface
                 </li>
                 <li>
-                  <i className="ti ti-check" aria-hidden="true"></i>24/7 help
-                  &amp; support
+                  <i className="ti ti-check" aria-hidden="true"></i>
+                  24/7 customer assistance
                 </li>
                 <li>
-                  <i className="ti ti-check" aria-hidden="true"></i>Transparent
-                  fees
+                  <i className="ti ti-check" aria-hidden="true"></i>
+                  Transparent, fair fees
                 </li>
               </ul>
 

@@ -17,7 +17,7 @@ interface ReferProps {
 const ReferSection = ({ layout = "one" }: ReferProps) => {
   return (
     <section
-      className={`refer pt-120 pb-120${layout === "two" ? " tertiary-bg" : ""}`}
+      className={`refer pt-120 pb-120 ${layout === "two" ? "tertiary-bg" : ""}`}
       style={{ backgroundImage: "url(/images/faq/faq-bg.png)" }}
     >
       <div className="container">
@@ -30,27 +30,28 @@ const ReferSection = ({ layout = "one" }: ReferProps) => {
             >
               <div className="section__content text-start">
                 <span className="fw-6 secondary-text text-xl">
-                  <strong>Refer,</strong> and Earn
+                  <strong>Lvup,</strong> Blockchain Solutions
                 </span>
                 <h2 className="title-animation fw-6 mt-25">
-                  Maximize Your Earnings with <span>Referrals</span>
+                  Building a <span>World Without Economic Boundaries</span>
                 </h2>
                 <p className="mt-16">
-                  Your journey doesn&apos;t end at gameplay—earn more by
-                  inviting friends. Our Refer &amp; Earn program rewards you for
-                  every successful referral, paid out in LVUPCoin.
+                  Lvup delivers information and value through blockchain-based
+                  internet solutions, enabling economic opportunities to spread
+                  more equitably across borders.
                 </p>
               </div>
 
               <div className="refer__content-group mt-35">
                 <div className="refer__content-single">
                   <p className="text-xl fw-5">
-                    <i className="fa-solid fa-circle-arrow-right"></i> Unlimited
-                    Earning Potential
+                    <i className="fa-solid fa-circle-arrow-right"></i> Inclusive
+                    Financial Access
                   </p>
                   <p className="text-sm mt-8">
-                    There&apos;s no cap—invite more friends, unlock more
-                    rewards.
+                    Lvup supports global businesses, individuals, and developers
+                    to move, manage, and distribute value while transitioning to
+                    blockchain-based systems.
                   </p>
                 </div>
 
@@ -58,12 +59,27 @@ const ReferSection = ({ layout = "one" }: ReferProps) => {
 
                 <div className="refer__content-single">
                   <p className="text-xl fw-5">
-                    <i className="fa-solid fa-circle-arrow-right"></i> Instant
-                    LVUPCoin Payouts
+                    <i className="fa-solid fa-circle-arrow-right"></i> Gaming as
+                    a Bridge
                   </p>
                   <p className="text-sm mt-8">
-                    Receive referral bonuses instantly after each successful
-                    sign-up.
+                    Game users naturally enter the cryptocurrency ecosystem,
+                    creating new customer segments and driving global financial
+                    inclusion.
+                  </p>
+                </div>
+
+                <div className="divider d-none d-xl-block"></div>
+
+                <div className="refer__content-single">
+                  <p className="text-xl fw-5">
+                    <i className="fa-solid fa-circle-arrow-right"></i>{" "}
+                    Innovative Crypto Solutions
+                  </p>
+                  <p className="text-sm mt-8">
+                    Lvup ensures no one is left behind by providing secure,
+                    connected, and compliant crypto solutions, including
+                    real-time cross-border payments and digital asset custody.
                   </p>
                 </div>
               </div>
@@ -75,7 +91,7 @@ const ReferSection = ({ layout = "one" }: ReferProps) => {
                   title="join now"
                   className="btn--primary"
                 >
-                  Join Now <i className="ti ti-arrow-narrow-right"></i>
+                  Explore Lvup <i className="ti ti-arrow-narrow-right"></i>
                 </Link>
               </div>
             </div>
@@ -91,7 +107,7 @@ const ReferSection = ({ layout = "one" }: ReferProps) => {
               >
                 <Image
                   src={one}
-                  alt="Referral program illustration"
+                  alt="Lvup blockchain solutions illustration"
                   loading="lazy"
                   sizes="(max-width: 1200px) 50vw, 520px"
                 />

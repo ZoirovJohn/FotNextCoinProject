@@ -20,18 +20,18 @@ const ReferTwoSection = () => {
             >
               <div className="section__content text-start">
                 <span className="fw-6 secondary-text text-xl">
-                  <strong>Refer,</strong> and Earn
+                  <strong>Share,</strong> and Grow
                 </span>
                 <h2
                   className="title-animation fw-6 mt-25"
                   style={{ textTransform: "none" }}
                 >
-                  Maximize Your Earnings with <span>Referrals</span>
+                  Boost Your Earnings with <span>Referrals</span>
                 </h2>
                 <p className="mt-16">
-                  Earn more with LVUP by inviting friends. Our Refer &amp; Earn
-                  program rewards you when your referrals join and start using
-                  the wallet.
+                  Invite your friends to LVUP and unlock rewards together. Our
+                  Refer & Earn program lets you earn every time your network
+                  grows and engages with the platform.
                 </p>
               </div>
 
@@ -39,11 +39,11 @@ const ReferTwoSection = () => {
                 <div className="refer__content-single">
                   <p className="text-xl fw-5">
                     <i className="fa-solid fa-circle-arrow-right"></i> Unlimited
-                    Earning Potential
+                    Rewards
                   </p>
                   <p className="text-sm mt-8">
-                    There&apos;s no cap on how much you can earn. Invite more
-                    friends, unlock more rewards.
+                    There’s no limit to your earning potential. Invite more
+                    friends and watch your rewards increase exponentially.
                   </p>
                 </div>
 
@@ -52,11 +52,11 @@ const ReferTwoSection = () => {
                 <div className="refer__content-single">
                   <p className="text-xl fw-5">
                     <i className="fa-solid fa-circle-arrow-right"></i> Instant
-                    LVUP Payouts
+                    Payouts
                   </p>
                   <p className="text-sm mt-8">
-                    Receive referral bonuses instantly after each successful
-                    sign-up.
+                    Get your referral bonuses immediately after every successful
+                    sign-up, no delays, no waiting periods.
                   </p>
                 </div>
               </div>
@@ -64,11 +64,11 @@ const ReferTwoSection = () => {
               <div className="mt-40">
                 <Link
                   href="/sign-up"
-                  aria-label="Join now"
-                  title="Join now"
+                  aria-label="Start earning today"
+                  title="Start earning today"
                   className="btn--primary"
                 >
-                  Join Now <i className="ti ti-arrow-narrow-right"></i>
+                  Start Earning <i className="ti ti-arrow-narrow-right"></i>
                 </Link>
               </div>
             </div>

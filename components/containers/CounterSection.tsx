@@ -7,7 +7,7 @@ const CounterSection = () => {
     <section className="counter">
       <div className="container">
         <div className="row gutter-24">
-          {/* Total Transactions */}
+          {/* Global Users */}
           <div
             className="col-12 col-md-6 col-xl-3"
             data-aos="fade-up"
@@ -15,18 +15,18 @@ const CounterSection = () => {
           >
             <div className="counter__single text-center tilt">
               <div className="counter__single-thumb">
-                <i className="ti ti-arrows-exchange"></i>
+                <i className="ti ti-users"></i>
               </div>
               <div className="counter__single-content mt-25">
                 <h3 className="fw-6">
-                  <Counter value={25} />M<span className="prefix">+</span>
+                  <Counter value={10} />+
                 </h3>
-                <p className="text-lg fw-5">Total Transactions Processed</p>
+                <p className="text-lg fw-5">Countries Engaged</p>
               </div>
             </div>
           </div>
 
-          {/* Verified Users */}
+          {/* Active Participants */}
           <div
             className="col-12 col-md-6 col-xl-3"
             data-aos="fade-up"
@@ -35,18 +35,20 @@ const CounterSection = () => {
           >
             <div className="counter__single text-center tilt">
               <div className="counter__single-thumb">
-                <i className="ti ti-users"></i>
+                <i className="ti ti-device-gamepad-2"></i>
               </div>
               <div className="counter__single-content mt-25">
                 <h3 className="fw-6">
-                  <Counter value={500} />K<span className="prefix">+</span>
+                  <Counter value={5} />M<span className="prefix">+</span>
                 </h3>
-                <p className="text-lg fw-5">Verified Users Worldwide</p>
+                <p className="text-lg fw-5">
+                  Gamers Joining Blockchain Ecosystem
+                </p>
               </div>
             </div>
           </div>
 
-          {/* Supported Currencies */}
+          {/* Partnerships */}
           <div
             className="col-12 col-md-6 col-xl-3"
             data-aos="fade-up"
@@ -55,18 +57,20 @@ const CounterSection = () => {
           >
             <div className="counter__single text-center tilt">
               <div className="counter__single-thumb">
-                <i className="ti ti-currency-dollar"></i>
+                <i className="ti ti-handshake"></i>
               </div>
               <div className="counter__single-content mt-25">
                 <h3 className="fw-6">
-                  <Counter value={50} />
+                  <Counter value={100} />+
                 </h3>
-                <p className="text-lg fw-5">Fiat & Crypto Currencies</p>
+                <p className="text-lg fw-5">
+                  International Partnerships & Alliances
+                </p>
               </div>
             </div>
           </div>
 
-          {/* Total Value Transferred */}
+          {/* Years of Innovation */}
           <div
             className="col-12 col-md-6 col-xl-3"
             data-aos="fade-up"
@@ -75,13 +79,13 @@ const CounterSection = () => {
           >
             <div className="counter__single text-center tilt">
               <div className="counter__single-thumb">
-                <i className="ti ti-wallet"></i>
+                <i className="ti ti-rocket"></i>
               </div>
               <div className="counter__single-content mt-25">
                 <h3 className="fw-6">
-                  <Counter value={12} />B<span className="prefix">+</span>
+                  Since <Counter value={25} />
                 </h3>
-                <p className="text-lg fw-5">Total Value Transferred</p>
+                <p className="text-lg fw-5">Pioneering Blockchain Solutions</p>
               </div>
             </div>
           </div>

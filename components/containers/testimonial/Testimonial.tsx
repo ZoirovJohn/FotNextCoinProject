@@ -65,11 +65,16 @@ const Testimonial = ({ showThumbs = true }: TestimonialProps) => {
             <div className="testimonial__content">
               <div className="section__content text-start mb-40">
                 <span className="fw-6 secondary-text text-xl">
-                  <strong>What,</strong> Our Players Say
+                  <strong>Hear,</strong> From Our Players
                 </span>
                 <h2 className="title-animation fw-6 mt-25">
-                  Success Stories from Our <span>Winning</span> Players
+                  Real Stories of <span>Success</span> and Big Wins
                 </h2>
+                <p className="mt-16">
+                  Discover how players around the world are enjoying rewards,
+                  achieving milestones, and sharing their unique experiences
+                  with our platform.
+                </p>
               </div>
               <TestimonialSliderTwo />
             </div>

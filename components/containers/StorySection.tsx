@@ -9,7 +9,7 @@ interface StoryProps {
 }
 
 const StorySection = ({ layout = "one" }: StoryProps) => {
-  // avoid mutating original when reversing
+  // Create reversed copy (non-destructive)
   const reversed = StoryData.slice().reverse();
 
   return (
@@ -23,21 +23,23 @@ const StorySection = ({ layout = "one" }: StoryProps) => {
               data-aos-duration="600"
             >
               <span className="fw-6 secondary-text text-xl">
-                <strong>What,</strong> Our Players Say
+                <strong>Real Voices,</strong> Real Impact
               </span>
               <h2 className="title-animation fw-6 mt-25">
-                Real Stories from the LVUPCoin Community
+                Stories from the LVUPCoin Community
               </h2>
               <p className="mt-25">
-                These are authentic experiences from players using{" "}
-                <strong>LVUPCoin</strong> for fast, simple, and secure gameplay
-                rewards. Your wins, your wallet—on your terms.
+                Hear directly from players around the world using{" "}
+                <strong>LVUPCoin</strong> for instant rewards, smooth gameplay,
+                and borderless payouts. Every win is more than just a number—
+                it’s a story worth sharing.
               </p>
             </div>
           </div>
         </div>
 
         <div className="row gutter-24">
+          {/* Left column */}
           <div className="col-12 col-xl-4">
             <div className="story__inner">
               <div className="story__wrapper story__left-wrapper">
@@ -78,6 +80,7 @@ const StorySection = ({ layout = "one" }: StoryProps) => {
             </div>
           </div>
 
+          {/* Center column with reversed order */}
           <div className="col-12 col-xl-4">
             <div className="story__inner story__inner-center">
               <div className="story__wrapper story__wrapper-center">
@@ -118,6 +121,7 @@ const StorySection = ({ layout = "one" }: StoryProps) => {
             </div>
           </div>
 
+          {/* Right column */}
           <div className="col-12 col-xl-4">
             <div className="story__inner">
               <div className="story__wrapper story__right-wrapper">

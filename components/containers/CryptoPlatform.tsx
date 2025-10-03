@@ -23,7 +23,7 @@ const CryptoPlatform = () => {
           <div className="col-12 col-lg-7 col-xl-8 col-xxl-6">
             <div className="section__content">
               <span className="fw-6 secondary-text text-xl">
-                <strong>LVUPCoin,</strong> The Future of Digital Cash
+                <strong>LVUPCoin</strong> — The Future of Digital Cash
               </span>
               <h2 className="title-animation fw-6 mt-25">
                 Seamless Payments for a Borderless World
@@ -33,9 +33,9 @@ const CryptoPlatform = () => {
           <div className="col-12 col-lg-5 col-xl-4 col-xxl-4 offset-xxl-2">
             <div className="section__content-right">
               <p>
-                Play top titles that support instant <strong>LVUPCoin</strong>{" "}
-                payouts. Earn in-game, swap to LVUPcoin, and settle globally in
-                seconds.
+                Experience instant and secure transactions with{" "}
+                <strong>LVUPCoin</strong>. Earn rewards in games, swap your
+                assets, and settle payments globally — all in seconds.
               </p>
               <div className="mt-25">
                 <Link

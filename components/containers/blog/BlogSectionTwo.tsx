@@ -20,18 +20,20 @@ const BlogSectionTwo = () => {
               data-aos-duration="600"
             >
               <span className="fw-6 secondary-text text-xl">
-                <strong>Latest,</strong> Blog Updates
+                <strong>Lvup,</strong> Insights & Innovations
               </span>
               <h2
                 className="title-animation fw-6 mt-25"
                 style={{ textTransform: "none" }}
               >
-                Innovative Ways to Play
+                Expanding Financial Access through Gaming & Blockchain
               </h2>
               <p className="mt-25">
-                Explore our blog for fresh insights, tips, and success stories.
-                Whether you&apos;re a seasoned player or just getting started,
-                there&apos;s something new to learn.
+                Discover how Lvup leverages blockchain and cryptocurrency to
+                create inclusive financial opportunities worldwide. From gaming
+                as a bridge to crypto ecosystems, explore our solutions,
+                insights, and global initiatives that drive economic
+                accessibility.
               </p>
             </div>
           </div>

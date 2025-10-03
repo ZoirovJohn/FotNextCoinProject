@@ -27,7 +27,7 @@ const ChooseSection = ({ layout = "one" }: ChooseProps) => {
               <div className="winner">
                 <Image
                   src={one}
-                  alt="User celebrating successful transfer"
+                  alt="User celebrating success with digital wallet"
                   className="winner-img"
                   loading="lazy"
                   sizes="(max-width: 1200px) 40vw, 420px"
@@ -35,7 +35,7 @@ const ChooseSection = ({ layout = "one" }: ChooseProps) => {
                 <div className="light">
                   <Image
                     src={two}
-                    alt="Glowing light effect"
+                    alt="Radiant light effect"
                     className="light-thumb"
                     loading="lazy"
                     sizes="240px"
@@ -45,7 +45,7 @@ const ChooseSection = ({ layout = "one" }: ChooseProps) => {
               <div className="car">
                 <Image
                   src={three}
-                  alt="Fast global movement illustration"
+                  alt="Illustration of fast global transactions"
                   loading="lazy"
                   sizes="360px"
                 />
@@ -62,18 +62,19 @@ const ChooseSection = ({ layout = "one" }: ChooseProps) => {
             >
               <div className="section__content text-start">
                 <span className="fw-6 secondary-text text-xl">
-                  <strong>Trusted,</strong> by Thousands of Users
+                  <strong>Trusted,</strong> by Thousands Around the Globe
                 </span>
                 <h2
                   className="title-animation fw-6 mt-25"
                   style={{ textTransform: "none" }}
                 >
-                  Trusted Platform for Secure <span>Digital</span> Payments
+                  Your Reliable Platform for Secure <span>Digital</span>{" "}
+                  Payments
                 </h2>
                 <p className="mt-25">
-                  LVUP puts security and simplicity first. Send and receive
-                  value globally with a fast, modern experience built for
-                  everyday payments.
+                  LVUP prioritizes security and simplicity. Effortlessly send,
+                  receive, and manage value worldwide with a sleek, fast, and
+                  modern experience designed for everyday use.
                 </p>
               </div>
 
@@ -88,7 +89,7 @@ const ChooseSection = ({ layout = "one" }: ChooseProps) => {
                 </div>
                 <div className="divider"></div>
                 <div className="right-group">
-                  <p className="text-lg">Based on 2,500+ reviews</p>
+                  <p className="text-lg">Based on 2,500+ satisfied users</p>
                   <div className="review mt-16" aria-hidden="true">
                     <i className="fa-solid fa-star"></i>
                     <i className="fa-solid fa-star"></i>
@@ -102,30 +103,30 @@ const ChooseSection = ({ layout = "one" }: ChooseProps) => {
               <ul className="list-group-row mt-40">
                 <li>
                   <i className="ti ti-check" aria-hidden="true"></i>
-                  Multi-currency support
+                  Support for multiple currencies
                 </li>
                 <li>
-                  <i className="ti ti-check" aria-hidden="true"></i>Instant
-                  global transfers
+                  <i className="ti ti-check" aria-hidden="true"></i>
+                  Instant global transfers
                 </li>
                 <li>
-                  <i className="ti ti-check" aria-hidden="true"></i>24/7 help
-                  &amp; support
+                  <i className="ti ti-check" aria-hidden="true"></i>
+                  24/7 customer assistance
                 </li>
                 <li>
-                  <i className="ti ti-check" aria-hidden="true"></i>Transparent,
-                  predictable fees
+                  <i className="ti ti-check" aria-hidden="true"></i>
+                  Clear and predictable fees
                 </li>
               </ul>
 
               <div className="mt-40">
                 <Link
                   href="/terms-conditions"
-                  aria-label="Read more about LVUP"
-                  title="Read more"
+                  aria-label="Learn more about LVUP platform"
+                  title="Learn more"
                   className="btn--primary"
                 >
-                  Read More <i className="ti ti-arrow-narrow-right"></i>
+                  Learn More <i className="ti ti-arrow-narrow-right"></i>
                 </Link>
               </div>
             </div>
@@ -137,7 +138,7 @@ const ChooseSection = ({ layout = "one" }: ChooseProps) => {
       <div className="left-thumb">
         <Image
           src={four}
-          alt="Spring flourish decoration"
+          alt="Spring flourish decorative accent"
           loading="lazy"
           sizes="240px"
         />
@@ -145,7 +146,7 @@ const ChooseSection = ({ layout = "one" }: ChooseProps) => {
       <div className="rocket">
         <Image
           src={five}
-          alt="Small rocket decoration"
+          alt="Small rocket decorative accent"
           loading="lazy"
           sizes="200px"
         />
@@ -153,7 +154,7 @@ const ChooseSection = ({ layout = "one" }: ChooseProps) => {
       <div className="right-thumb">
         <Image
           src={six}
-          alt="Right decorative shape"
+          alt="Right-side decorative shape"
           loading="lazy"
           sizes="220px"
         />
@@ -161,7 +162,7 @@ const ChooseSection = ({ layout = "one" }: ChooseProps) => {
       <div className="trophy">
         <Image
           src={seven}
-          alt="Trophy decoration"
+          alt="Trophy decorative accent"
           data-aos="fade-left"
           data-aos-duration="600"
           loading="lazy"

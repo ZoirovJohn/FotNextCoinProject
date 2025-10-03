@@ -23,35 +23,37 @@ const HeroSectionTwo = () => {
           <div className="col-12 col-lg-7 col-xl-7">
             <div className="banner-three__content">
               <span className="fw-6 secondary-text text-xl sub-title">
-                <strong>Bank,</strong> Trade, and Grow with Lvup
+                <strong>Empower,</strong> Connect, and Grow with Lvup
               </span>
               <h1 className="fw-7 mt-25">
                 The Future of{" "}
-                <span className="primary-text">Banking & Crypto</span>
+                <span className="primary-text">Global Finance</span>
               </h1>
               <p className="text-xl mt-30">
-                Welcome to Lvup — your all-in-one platform for seamless digital
-                banking and cryptocurrency services. Manage multi-currency
-                accounts, send fast transfers, and trade top digital assets
-                securely, all in one place.
+                Lvup is building a world without economic boundaries. Through
+                blockchain-based internet solutions, we deliver value and
+                opportunity more equitably across borders. From gaming
+                communities to global businesses, we serve as a bridge to
+                financial inclusion, enabling fast, secure, and low-cost access
+                to digital assets and payments.
               </p>
               <div className="banner-action mt-40">
                 <Link
-                  href="#banking"
-                  aria-label="open banking account"
-                  title="open banking account"
+                  href="#inclusion"
+                  aria-label="learn about inclusion"
+                  title="learn about inclusion"
                   className="btn--primary"
                 >
-                  Open Account
+                  Join the Movement
                   <i className="ti ti-arrow-narrow-right"></i>
                 </Link>
                 <Link
-                  href="#crypto"
-                  aria-label="explore crypto services"
-                  title="explore crypto services"
+                  href="#solutions"
+                  aria-label="explore solutions"
+                  title="explore solutions"
                   className="btn--secondary"
                 >
-                  Explore Crypto <i className="ti ti-arrow-narrow-right"></i>
+                  Explore Solutions <i className="ti ti-arrow-narrow-right"></i>
                 </Link>
               </div>
             </div>
