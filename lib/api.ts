@@ -3,15 +3,14 @@
 const BASE = process.env.NEXT_PUBLIC_API_URL ?? ""; // e.g., "http://localhost:4000"
 const PREFIX = process.env.NEXT_PUBLIC_API_PREFIX ?? ""; // e.g., "/api" or ""
 
-export type Opts = {
+export type Opts<BodyType = unknown> = {
   method?: string;
-  body?: any;
+  body?: BodyType;
   token?: string | null;
   headers?: Record<string, string>;
   signal?: AbortSignal;
   timeoutMs?: number;
-  // internal
-  _retry?: boolean;
+  _retry?: boolean; // internal
 };
 
 export class ApiError extends Error {
@@ -19,6 +18,7 @@ export class ApiError extends Error {
   url: string;
   method: string;
   bodyText?: string;
+
   constructor(params: {
     message: string;
     status: number;
@@ -36,13 +36,11 @@ export class ApiError extends Error {
 }
 
 function buildUrl(path: string): string {
-  // path comes in like "/auth/signup"
   return `${BASE}${PREFIX}${path}`;
 }
 
-async function parseJsonSafe<T = any>(res: Response): Promise<T | {}> {
+async function parseJsonSafe<T = unknown>(res: Response): Promise<T | object> {
   try {
-    // 204 No Content has no body
     if (res.status === 204) return {};
     return (await res.json()) as T;
   } catch {
@@ -59,26 +57,23 @@ async function textSafe(res: Response): Promise<string> {
 }
 
 async function refresh(): Promise<string | null> {
-  // sends httpOnly refresh cookie automatically
   const res = await fetch(`${BASE}${PREFIX}/auth/refresh`, {
     method: "POST",
     credentials: "include",
   });
+
   if (!res.ok) return null;
+
   const { accessToken } = (await res.json().catch(() => ({}))) as {
     accessToken?: string;
   };
+
   return accessToken ?? null;
 }
 
-/**
- * Throwing version (original semantics).
- * On 401, tries a single refresh and replays with the new token.
- * Throws ApiError on non-2xx.
- */
-export async function apiFetch<T = any>(
+export async function apiFetch<T = unknown, B = unknown>(
   path: string,
-  opts: Opts = {}
+  opts: Opts<B> = {}
 ): Promise<{ data: T; res: Response; token?: string | null }> {
   const {
     method = "GET",
@@ -102,7 +97,7 @@ export async function apiFetch<T = any>(
   try {
     res = await fetch(url, {
       method,
-      credentials: "include", // send/receive cookies
+      credentials: "include",
       headers: {
         "Content-Type": "application/json",
         ...(token ? { Authorization: `Bearer ${token}` } : {}),
@@ -111,10 +106,11 @@ export async function apiFetch<T = any>(
       ...(body !== undefined ? { body: JSON.stringify(body) } : {}),
       signal: signal ?? controller?.signal,
     });
-  } catch (e: any) {
+  } catch (e: unknown) {
     if (timeoutId) clearTimeout(timeoutId);
+    const msg = e instanceof Error ? e.message : String(e);
     throw new ApiError({
-      message: `Network error for ${method} ${path}: ${e?.message ?? e}`,
+      message: `Network error for ${method} ${path}: ${msg}`,
       status: 0,
       url,
       method,
@@ -123,11 +119,10 @@ export async function apiFetch<T = any>(
     if (timeoutId) clearTimeout(timeoutId);
   }
 
-  // If 401, try one refresh then replay with new token
   if (res.status === 401 && !_retry) {
     const newToken = await refresh();
     if (newToken) {
-      return apiFetch<T>(path, { ...opts, token: newToken, _retry: true });
+      return apiFetch<T, B>(path, { ...opts, token: newToken, _retry: true });
     }
   }
 
@@ -148,43 +143,41 @@ export async function apiFetch<T = any>(
   return { data, res, token };
 }
 
-/**
- * Non-throwing wrapper: always returns { data?, error?, res? }.
- * Good for UI layers where you don't want try/catch everywhere.
- */
-export async function safeApiFetch<T = any>(
+export async function safeApiFetch<T = unknown, B = unknown>(
   path: string,
-  opts: Opts = {}
+  opts: Opts<B> = {}
 ): Promise<{ data?: T; error?: string; res?: Response; status?: number }> {
   try {
-    const { data, res } = await apiFetch<T>(path, opts);
+    const { data, res } = await apiFetch<T, B>(path, opts);
     return { data, res, status: res.status };
-  } catch (e: any) {
+  } catch (e: unknown) {
     if (e instanceof ApiError) {
-      return {
-        error: e.message,
-        status: e.status,
-      };
+      return { error: e.message, status: e.status };
     }
-    return {
-      error: e?.message ?? "Unknown error",
-    };
+    const msg = e instanceof Error ? e.message : "Unknown error";
+    return { error: msg };
   }
 }
 
-/** Convenience clients (throwing & safe) */
 export const api = {
   register: (email: string, password: string, name?: string) =>
     apiFetch("/auth/signup", {
       method: "POST",
       body: { email, password, name },
     }),
+
   login: (email: string, password: string) =>
-    apiFetch<{ accessToken: string; user: any }>("/auth/login", {
-      method: "POST",
-      body: { email, password },
-    }),
-  me: (token: string) => apiFetch("/auth/me", { token }),
+    apiFetch<{ accessToken: string; user: Record<string, unknown> }>(
+      "/auth/login",
+      {
+        method: "POST",
+        body: { email, password },
+      }
+    ),
+
+  me: (token: string) =>
+    apiFetch<Record<string, unknown>>("/auth/me", { token }),
+
   logout: () => apiFetch("/auth/logout", { method: "POST" }),
 };
 
@@ -194,11 +187,18 @@ export const apiSafe = {
       method: "POST",
       body: { email, password, name },
     }),
+
   login: (email: string, password: string) =>
-    safeApiFetch<{ accessToken: string; user: any }>("/auth/login", {
-      method: "POST",
-      body: { email, password },
-    }),
-  me: (token: string) => safeApiFetch("/auth/me", { token }),
+    safeApiFetch<{ accessToken: string; user: Record<string, unknown> }>(
+      "/auth/login",
+      {
+        method: "POST",
+        body: { email, password },
+      }
+    ),
+
+  me: (token: string) =>
+    safeApiFetch<Record<string, unknown>>("/auth/me", { token }),
+
   logout: () => safeApiFetch("/auth/logout", { method: "POST" }),
 };

@@ -9,7 +9,6 @@ import FooterTwo from "@/components/layout/footer/FooterTwo";
 import Video from "@/components/containers/VIdeo/Video";
 
 const Sponsors = dynamic(() => import("@/components/containers/Sponsors"));
-
 const ClientWrapper = dynamic(
   () => import("@/components/widgets/ClientWrapper")
 );
@@ -21,7 +20,7 @@ export const generateMetadata = async (): Promise<Metadata> => ({
   keywords: ["crypto gaming", "lottery", "fafai", "casino", "blockchain"],
   openGraph: {
     title: "Fafai - Crypto Gaming & Lottery",
-    description: "Experience seamless blockchain - based gaming and lotteries.",
+    description: "Experience seamless blockchain-based gaming and lotteries.",
     url: "https://fafai.netlify.app/",
     siteName: "Fafai",
     images: [
@@ -37,13 +36,13 @@ export const generateMetadata = async (): Promise<Metadata> => ({
   twitter: { card: "summary_large_image" },
 });
 
-const page = () => {
+const Page = () => {
   return (
     <div className="page-wrapper a-cursor">
       <Header />
       <Breadcrumb title="Crypto Details" />
       <Video />
-      <LotteryDetails /> //Todo: Change to crypto to transactions
+      <LotteryDetails /> {/* Todo: Change to crypto to transactions */}
       <WorkSection />
       <Sponsors />
       <StorySection layout="two" />
@@ -53,4 +52,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

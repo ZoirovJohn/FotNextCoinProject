@@ -10,7 +10,8 @@ export default function RegisterForm() {
   const [error, setError] = useState<string | null>(null);
   const { register } = useAuth();
   const [pending, setPending] = useState(false);
-  const { lang } = useLanguage(); // get current language
+  const { lang } = useLanguage(); // current language
+  const t = translations[lang].auth;
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -18,21 +19,23 @@ export default function RegisterForm() {
     setPending(true);
 
     const formData = new FormData(e.currentTarget);
-    const name = String(formData.get("name"));
-    const email = String(formData.get("email"));
-    const password = String(formData.get("password"));
+    const name = String(formData.get("name") ?? "");
+    const email = String(formData.get("email") ?? "");
+    const password = String(formData.get("password") ?? "");
 
     try {
       await register(email, password, name);
       window.location.href = "/";
-    } catch (err: any) {
-      setError(err.message || "Registration failed");
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError(t.signUp + " failed");
+      }
     } finally {
       setPending(false);
     }
   }
-
-  const t = translations[lang].auth; // shorthand for current language texts
 
   return (
     <form onSubmit={handleSubmit} noValidate>

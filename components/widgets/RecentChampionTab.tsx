@@ -1,8 +1,7 @@
 "use client";
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-// ⚠️ If possible, move data out of /public to /src/data
 import RecentChampionsData from "@/public/data/recent-champions-data";
 
 type TabId = string;
@@ -11,7 +10,6 @@ const RecentChampionTab = () => {
   const [activeTab, setActiveTab] = useState<TabId>("allWinners");
   const [isAnimatingOut, setIsAnimatingOut] = useState(false);
 
-  // Optional: quick formatter for amounts like "1,234.56"
   const fmt = (v: string | number) => {
     const n =
       typeof v === "number" ? v : Number(String(v).replace(/[^\d.-]/g, ""));
@@ -21,14 +19,8 @@ const RecentChampionTab = () => {
     }).format(n);
   };
 
-  const activeIndex = useMemo(
-    () => RecentChampionsData.findIndex((t) => t.id === activeTab),
-    [activeTab]
-  );
-
   const handleTabClick = (id: TabId) => {
     if (id === activeTab) return;
-    // Fade out current, swap, then fade in
     setIsAnimatingOut(true);
     setTimeout(() => {
       setActiveTab(id);
@@ -42,9 +34,6 @@ const RecentChampionTab = () => {
         <div className="col-12">
           <div
             className="ch-list__btns mb-40"
-            data-aos="fade-up"
-            data-aos-duration="600"
-            data-aos-delay="200"
             role="tablist"
             aria-label="Recent champions categories"
           >
@@ -73,13 +62,8 @@ const RecentChampionTab = () => {
 
       <div className="row">
         <div className="col-12">
-          <div
-            className="ch-list__inner"
-            data-aos="fade-up"
-            data-aos-duration="600"
-            data-aos-delay="400"
-          >
-            {RecentChampionsData.map((tab, tIdx) => {
+          <div className="ch-list__inner">
+            {RecentChampionsData.map((tab) => {
               const isActive = activeTab === tab.id;
               return (
                 <div
@@ -99,60 +83,22 @@ const RecentChampionTab = () => {
                             <h6 className="title-animation fw-6 neutral-top">
                               {section.title}
                             </h6>
-                            <Link
-                              href="/lottery-result"
-                              aria-label="See all payouts"
-                            >
-                              See All Payouts
-                            </Link>
+                            <Link href="/lottery-result">See All Payouts</Link>
                           </div>
 
                           <div className="winning-table">
                             <table>
                               <thead>
                                 <tr>
-                                  <th>
-                                    <div className="th-wrap">
-                                      User / Bet ID{" "}
-                                      <span aria-hidden="true">
-                                        <i className="fa-solid fa-caret-up"></i>
-                                        <i className="fa-solid fa-caret-down"></i>
-                                      </span>
-                                    </div>
-                                  </th>
-                                  <th>
-                                    <div className="th-wrap">
-                                      Game{" "}
-                                      <span aria-hidden="true">
-                                        <i className="fa-solid fa-caret-up"></i>
-                                        <i className="fa-solid fa-caret-down"></i>
-                                      </span>
-                                    </div>
-                                  </th>
-                                  <th>
-                                    <div className="th-wrap">
-                                      Amount (FAFAI){" "}
-                                      <span aria-hidden="true">
-                                        <i className="fa-solid fa-caret-up"></i>
-                                        <i className="fa-solid fa-caret-down"></i>
-                                      </span>
-                                    </div>
-                                  </th>
-                                  <th>
-                                    <div className="th-wrap">
-                                      Profit (FAFAI){" "}
-                                      <span aria-hidden="true">
-                                        <i className="fa-solid fa-caret-up"></i>
-                                        <i className="fa-solid fa-caret-down"></i>
-                                      </span>
-                                    </div>
-                                  </th>
+                                  <th>User / Bet ID</th>
+                                  <th>Game</th>
+                                  <th>Amount (FAFAI)</th>
+                                  <th>Profit (FAFAI)</th>
                                 </tr>
                               </thead>
-
                               <tbody>
                                 {section.entries.map((entry, entryIdx) => (
-                                  <tr key={`${tIdx}-${idx}-${entryIdx}`}>
+                                  <tr key={`${tab.id}-${idx}-${entryIdx}`}>
                                     <td>
                                       <div className="author__info">
                                         <div className="thumb">
@@ -168,15 +114,12 @@ const RecentChampionTab = () => {
                                         </div>
                                       </div>
                                     </td>
-
                                     <td>{entry.game}</td>
-
                                     <td>
                                       {typeof entry.amount === "number"
                                         ? fmt(entry.amount)
                                         : entry.amount}
                                     </td>
-
                                     <td>
                                       <div className="author__info">
                                         <div
@@ -216,7 +159,6 @@ const RecentChampionTab = () => {
       </div>
 
       <style jsx>{`
-        /* Optional: small transition helpers—hook up to your existing .animating class if present */
         .ch-list__single.animating-out {
           opacity: 0;
           transform: translateY(6px);

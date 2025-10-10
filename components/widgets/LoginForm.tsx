@@ -27,8 +27,12 @@ export default function LoginForm() {
     try {
       await login(email, password);
       window.location.href = "/"; // redirect after login
-    } catch (err: any) {
-      setError(err?.message || `${t.signIn} failed`);
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError(`${t.signIn} failed`);
+      }
     } finally {
       setPending(false);
     }

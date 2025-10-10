@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import NavbarData from "@/public/data/navbar-data";
@@ -11,12 +11,6 @@ interface OffCanvasMenuProps {
 }
 
 const OffCanvasMenu = ({ isOpen, onClose }: OffCanvasMenuProps) => {
-  const [openDropdown, setOpenDropdown] = useState<number | null>(null);
-
-  const handleDropdownToggle = (index: number) => {
-    setOpenDropdown((prev) => (prev === index ? null : index));
-  };
-
   const menuWrapperRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -37,7 +31,7 @@ const OffCanvasMenu = ({ isOpen, onClose }: OffCanvasMenuProps) => {
     <>
       <div
         className={`mobile-menu d-block d-xl-none ${
-          isOpen ? " show-menu" : " "
+          isOpen ? " show-menu" : ""
         }`}
       >
         <nav className="mobile-menu__wrapper" ref={menuWrapperRef}>
@@ -55,17 +49,17 @@ const OffCanvasMenu = ({ isOpen, onClose }: OffCanvasMenuProps) => {
               <i className="ti ti-x"></i>
             </button>
           </div>
+
           <div className="mobile-menu__list">
             <ul className="navbar__list">
-              {NavbarData.map((item, index) => {
-                return (
-                  <li className="navbar__item nav-fade" key={index}>
-                    <Link href={item.path}>{item.title}</Link>
-                  </li>
-                );
-              })}
+              {NavbarData.map((item, index) => (
+                <li className="navbar__item nav-fade" key={index}>
+                  <Link href={item.path}>{item.title}</Link>
+                </li>
+              ))}
             </ul>
           </div>
+
           <div className="mobile-menu__cta nav-fade d-block d-md-none">
             <Link
               href="sign-up"
@@ -76,6 +70,7 @@ const OffCanvasMenu = ({ isOpen, onClose }: OffCanvasMenuProps) => {
               Sign Up <i className="ti ti-arrow-narrow-right"></i>
             </Link>
           </div>
+
           <div className="mobile-menu__social social nav-fade">
             <Link
               href="https://www.facebook.com/"
@@ -112,9 +107,10 @@ const OffCanvasMenu = ({ isOpen, onClose }: OffCanvasMenuProps) => {
           </div>
         </nav>
       </div>
+
       <div
         className={`mobile-menu__backdrop ${
-          isOpen ? " mobile-menu__backdrop-active" : " "
+          isOpen ? " mobile-menu__backdrop-active" : ""
         }`}
         onClick={onClose}
       ></div>

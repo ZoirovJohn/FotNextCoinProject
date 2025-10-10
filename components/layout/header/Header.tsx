@@ -1,10 +1,10 @@
 "use client";
+
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import Image from "next/image";
 import NavbarData from "@/public/data/navbar-data";
 import logo from "@/public/images/logo.png";
-import TopGames from "./TopGames";
 import { useAuth } from "@/lib/contexts/AuthContext";
 import { useRouter } from "next/navigation";
 import translations from "@/public/locals/translations";
@@ -16,12 +16,7 @@ const LanguageSelector = dynamic(
   () => import("@/components/layout/header/LanguageSelector")
 );
 
-interface HeaderProps {
-  showTopGames?: boolean;
-}
-
-const Header = ({ showTopGames = true }: HeaderProps) => {
-  // add auth here
+const Header = () => {
   const { user, ready, logout } = useAuth();
   const router = useRouter();
   const lang = useLanguage().lang;
@@ -37,10 +32,9 @@ const Header = ({ showTopGames = true }: HeaderProps) => {
                   <div className="navbar__intro">
                     <div className="navbar-logo">
                       <Link href="/">
-                        <Image src={logo} alt="Image" />
+                        <Image src={logo} alt="Logo" />
                       </Link>
                     </div>
-                    {/* {showTopGames && <TopGames />} */}
                   </div>
 
                   <div className="navbar__menu d-none d-xl-block">
@@ -68,7 +62,6 @@ const Header = ({ showTopGames = true }: HeaderProps) => {
                       </div>
 
                       <div className="navbar__cta d-none d-sm-flex">
-                        {/* 🔑 here’s the switch */}
                         {ready && user ? (
                           <button
                             className="btn--primary"

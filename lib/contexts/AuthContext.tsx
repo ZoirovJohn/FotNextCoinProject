@@ -24,21 +24,23 @@ const Ctx = createContext<AuthCtx>({
 
 export const useAuth = () => useContext(Ctx);
 
+interface ApiLoginResponse {
+  accessToken: string;
+  user: User;
+}
+
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User>(null);
   const [token, setToken] = useState<string | null>(null);
   const [ready, setReady] = useState(false);
 
-  // === Bootstrap on page load: explicit refresh -> me ===
   useEffect(() => {
     (async () => {
       try {
         const existingToken = localStorage.getItem("accessToken");
         const existingUser = localStorage.getItem("user");
 
-        if (existingUser) {
-          setUser(JSON.parse(existingUser));
-        }
+        if (existingUser) setUser(JSON.parse(existingUser));
 
         if (!existingToken) {
           setUser(null);
@@ -47,9 +49,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           return;
         }
 
-        // try refresh token
+        // refresh token
         const r = await fetch(
-          `${process.env.NEXT_PUBLIC_API_URL}${
+          `${process.env.NEXT_PUBLIC_API_URL ?? ""}${
             process.env.NEXT_PUBLIC_API_PREFIX ?? ""
           }/auth/refresh`,
           { method: "POST", credentials: "include" }
@@ -60,20 +62,21 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           setToken(null);
           localStorage.removeItem("accessToken");
           localStorage.removeItem("user");
+          setReady(true);
           return;
         }
 
-        const { accessToken } = await r.json();
-        setToken(accessToken);
-        localStorage.setItem("accessToken", accessToken);
+        const { accessToken }: { accessToken?: string } = await r.json();
+        if (accessToken) {
+          setToken(accessToken);
+          localStorage.setItem("accessToken", accessToken);
 
-        // refresh user data
-        const me = await api.me(accessToken);
-        setUser((me.data as any).user ?? null);
-        localStorage.setItem(
-          "user",
-          JSON.stringify((me.data as any).user ?? {})
-        );
+          const me = await api.me(accessToken);
+          const fetchedUser =
+            (me.data as unknown as ApiLoginResponse).user ?? null;
+          setUser(fetchedUser);
+          localStorage.setItem("user", JSON.stringify(fetchedUser ?? {}));
+        }
       } catch {
         setUser(null);
         setToken(null);
@@ -88,31 +91,27 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const register = async (email: string, password: string, name?: string) => {
     if (!email || !password) throw new Error("Email and password required");
 
-    const { data } = await api.register(email, password, name);
-    const accessToken = (data as any).accessToken as string | undefined;
+    const res = await api.register(email, password, name);
+    const data = res.data as ApiLoginResponse;
 
-    setToken(accessToken ?? null);
-    setUser((data as any).user ?? null);
+    setToken(data.accessToken);
+    setUser(data.user);
 
-    if (accessToken) {
-      localStorage.setItem("accessToken", accessToken);
-      localStorage.setItem("user", JSON.stringify((data as any).user ?? {}));
-    }
+    localStorage.setItem("accessToken", data.accessToken);
+    localStorage.setItem("user", JSON.stringify(data.user ?? {}));
   };
 
   const login = async (email: string, password: string) => {
     if (!email || !password) throw new Error("Email and password required");
 
-    const { data } = await api.login(email, password);
-    const accessToken = (data as any).accessToken as string | undefined;
+    const res = await api.login(email, password);
+    const data = res.data as ApiLoginResponse;
 
-    setToken(accessToken ?? null);
-    setUser((data as any).user ?? null);
+    setToken(data.accessToken);
+    setUser(data.user);
 
-    if (accessToken) {
-      localStorage.setItem("accessToken", accessToken);
-      localStorage.setItem("user", JSON.stringify((data as any).user ?? {}));
-    }
+    localStorage.setItem("accessToken", data.accessToken);
+    localStorage.setItem("user", JSON.stringify(data.user ?? {}));
   };
 
   const logout = async () => {
