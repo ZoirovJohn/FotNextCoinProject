@@ -1,6 +1,6 @@
 // src/lib/api.ts
 
-const BASE = process.env.NEXT_PUBLIC_API_URL ?? ""; // e.g., "http://localhost:4000"
+const BASE = process.env.NEXT_PUBLIC_API_URL ?? ""; // e.g., "http://localhost:4100"
 const PREFIX = process.env.NEXT_PUBLIC_API_PREFIX ?? ""; // e.g., "/api" or ""
 
 export type Opts<BodyType = unknown> = {

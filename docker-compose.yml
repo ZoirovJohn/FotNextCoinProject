@@ -5,9 +5,9 @@ services:
     restart: always
     image: node:20.10.0
     ports:
-      - "4000:3000"
+      - "4100:3100"
     environment:
-      - PORT=3000
+      - PORT=3100
 
     volumes:
       - ./:/usr/src/fafai-next
