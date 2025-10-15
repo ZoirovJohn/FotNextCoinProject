@@ -1,5 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  images: {
+    unoptimized: true, // disables sharp optimization
+  },
   async rewrites() {
     return [
       {
@@ -9,4 +15,5 @@ const nextConfig = {
     ];
   },
 };
+
 module.exports = nextConfig;

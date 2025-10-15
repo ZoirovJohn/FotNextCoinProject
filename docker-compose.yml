@@ -1,4 +1,3 @@
-
 services:
   fafai-next:
     container_name: fafai-next
@@ -17,7 +16,7 @@ services:
       - client-network
 
     #FOR PRODUCTION
-    command: bash -c "yarn && yarn run build && yarn run start"
+    command: bash -c "yarn install && yarn run build && yarn run start"
 
 networks:
   client-network:
