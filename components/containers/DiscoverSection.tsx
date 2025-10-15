@@ -60,14 +60,15 @@ const DiscoverSection = () => {
                   <strong>Why,</strong> Choose Fafai!
                 </span>
                 <h2 className="title-animation fw-6 mt-25">
-                  Discover the Future of <span>Financial Inclusion</span>
+                  Social <span>Impact</span>
                 </h2>
                 <p className="mt-25">
-                  Fafai delivers information and value through blockchain-based
-                  internet solutions, enabling economic opportunities to spread
-                  more equitably across borders. By serving as a bridge between
-                  gaming and finance, we empower people to participate in the
-                  global economy like never before.
+                  We are building an inclusive and sustainable financial system
+                  to enhance global accessibility and equity. By innovating
+                  financial service access alongside customers and partners, and
+                  through research, development, and industry-academia
+                  collaboration, we contribute to expanding economic fairness
+                  and opportunities.
                 </p>
               </div>
 
@@ -107,7 +108,7 @@ const DiscoverSection = () => {
 
               <div className="mt-40">
                 <Link
-                  href="about-us"
+                  href="/"
                   aria-label="Read More"
                   title="Read More"
                   className="btn--primary"

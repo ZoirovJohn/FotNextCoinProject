@@ -4,11 +4,16 @@ import Header from "@/components/layout/header/Header";
 import CounterSection from "@/components/containers/CounterSection";
 import WorkSection from "@/components/containers/WorkSection";
 import CryptoPlatform from "@/components/containers/CryptoPlatform";
-import RecentChampions from "@/components/containers/games/RecentChampions";
-import StorySection from "@/components/containers/StorySection";
 import ReferSection from "@/components/containers/ReferSection";
-import BlogSectionTwo from "@/components/containers/blog/BlogSectionTwo";
 import Footer from "@/components/layout/footer/Footer";
+import WorkSection1 from "@/components/containers/WorkSection1";
+import WorkSection2 from "@/components/containers/WorkSection2";
+import WorkSection3 from "@/components/containers/WorkSection3";
+import FarmDiscoverSection from "@/components/containers/FarmDiscoverSection";
+import PigCowDiscoverSection from "@/components/containers/PigCowDiscoverSection";
+import ChicksDiscoverSection from "@/components/containers/ChicksDiscoverSection";
+import FarmRobotDiscoverSection from "@/components/containers/FarmRobotDiscoverSection";
+import LegendCocosDiscoverSection from "@/components/containers/LegendCocosDiscoverSection";
 
 const HeroSectionTwo = dynamic(
   () => import("@/components/layout/banner/HeroSectionTwo")
@@ -53,11 +58,16 @@ const page = () => {
       <DiscoverSection />
       <CounterSection />
       <WorkSection />
+      <WorkSection1 />
+      <WorkSection2 />
+      <WorkSection3 />
+      <PigCowDiscoverSection />
+      <FarmDiscoverSection />
+      <ChicksDiscoverSection />
+      <FarmRobotDiscoverSection />
+      <LegendCocosDiscoverSection />
       <CryptoPlatform />
-      <RecentChampions />
-      <StorySection layout="two" />
       <ReferSection layout="two" />
-      <BlogSectionTwo />
       <Footer />
       <ClientWrapper />
     </div>

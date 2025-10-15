@@ -50,6 +50,24 @@ const CryptoPlatformData = [
     platforms: ["Windows", "Android", "Xbox", "Mac"],
     href: "game-details",
   },
+  {
+    id: 5,
+    title: "Bit Casino",
+    image: three,
+    category: "Gambling",
+    isKingCard: false,
+    platforms: ["Windows", "Android", "Xbox", "Mac"],
+    href: "game-details",
+  },
+  {
+    id: 6,
+    title: "Golden Coin",
+    image: four,
+    category: "JACKPOT",
+    isKingCard: false,
+    platforms: ["Windows", "Android", "Xbox", "Mac"],
+    href: "game-details",
+  },
 ];
 
 export default CryptoPlatformData;

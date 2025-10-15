@@ -3,36 +3,17 @@ const NavbarData = [
     title: "Home",
     path: "/",
   },
-
-  // {
-  //   title: "Games",
-  //   path: "games",
-  //   submenu: [
-  //     {
-  //       title: "Games",
-  //       path: "games",
-  //     },
-  //     {
-  //       title: "Games Two",
-  //       path: "games-two",
-  //     },
-  //     {
-  //       title: "Game Details",
-  //       path: "game-details",
-  //     },
-  //   ],
-  // },
   {
-    title: "Crypto",
-    path: "crypto",
+    title: "White Paper",
+    path: "white-paper",
   },
   {
-    title: "About Us",
-    path: "about-us",
+    title: "Game",
+    path: "game",
   },
   {
-    title: "Contact Us",
-    path: "contact-us",
+    title: "Youtube",
+    path: "you-tube",
   },
 ];
 

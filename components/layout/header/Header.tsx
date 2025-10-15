@@ -55,7 +55,7 @@ const Header = () => {
                     </ul>
                   </div>
 
-                  <div className="navbar__options">
+                  {/* <div className="navbar__options">
                     <div className="navbar__mobile-options">
                       <div className="navbar__mobile-icons">
                         <LanguageSelector />
@@ -89,7 +89,7 @@ const Header = () => {
                     </div>
 
                     <OffcanvasTrigger />
-                  </div>
+                  </div> */}
                 </nav>
               </div>
             </div>

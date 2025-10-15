@@ -83,17 +83,6 @@ const ReferSection = ({ layout = "one" }: ReferProps) => {
                   </p>
                 </div>
               </div>
-
-              <div className="mt-40">
-                <Link
-                  href="/sign-up"
-                  aria-label="join now"
-                  title="join now"
-                  className="btn--primary"
-                >
-                  Explore Fafai <i className="ti ti-arrow-narrow-right"></i>
-                </Link>
-              </div>
             </div>
           </div>
 

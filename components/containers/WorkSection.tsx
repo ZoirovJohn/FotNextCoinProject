@@ -4,10 +4,15 @@ import two from "@/public/images/right-arrow.png";
 import three from "@/public/images/spring.png";
 import four from "@/public/images/left-th.png";
 import five from "@/public/images/line.png";
+import todaysFarm from "@/public/images/TodaysFarm.png";
+import silverEgg from "@/public/images/silverEgg1.png";
+import whiteChick from "@/public/images/whiteChick.png";
+import yellowChick from "@/public/images/yellowChick.png";
+import chickWhite3 from "@/public/images/chicken-white3.png";
 
 const WorkSection = () => {
   return (
-    <section className="work work-alter pt-120 pb-120">
+    <section className="work work-alter pb-120">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-12 col-xl-9">
@@ -16,10 +21,12 @@ const WorkSection = () => {
               data-aos="fade-up"
               data-aos-duration="600"
             >
-              <span className="fw-6 secondary-text text-xl">
-                <strong>Step,</strong> into the Future
-              </span>
-              <h2 className="title-animation fw-6 mt-25">How Fafai Works</h2>
+              <Image
+                src={todaysFarm}
+                alt="Illustration of fast global transactions"
+                loading="lazy"
+                sizes="360px"
+              />
               <p className="mt-16">
                 Fafai combines gaming with blockchain to create an inclusive
                 financial ecosystem. Players naturally earn tokens, access
@@ -30,82 +37,81 @@ const WorkSection = () => {
           </div>
         </div>
 
-        <div className="row gutter-60">
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "flex-start",
+            width: "100%",
+          }}
+        >
           {/* Step 1 */}
-          <div className="col-12 col-md-6 col-xl-4">
+          <div
+            style={{ flex: "0 0 18%", textAlign: "center", marginTop: "270px" }}
+          >
             <div
               className="work__single text-center"
               data-aos="fade-up"
               data-aos-duration="600"
             >
-              <div className="thumb">
-                <i className="ti ti-device-gamepad-2"></i>
-                <span>01</span>
-                <Image
-                  src={one}
-                  alt="Left arrow"
-                  className="lg-arrow d-none d-xl-block"
-                />
-              </div>
-              <div className="content mt-25">
-                <h6 className="fw-6">Play & Earn Tokens</h6>
-                <p className="text-sm mt-12">
-                  Engage in games while earning FAFAI tokens. Each action
-                  connects you to blockchain-based rewards and financial tools.
-                </p>
-              </div>
+              {" "}
+              <Image
+                src={silverEgg}
+                alt="Step 1"
+                style={{ width: "80%", height: "auto" }}
+              />
+              <h6>Silver Egg</h6>
+              <p>When touched by hand, it hatches into a chick.</p>{" "}
             </div>
           </div>
 
           {/* Step 2 */}
-          <div className="col-12 col-md-6 col-xl-4">
-            <div
-              className="work__single work__single-alt text-center"
-              data-aos="fade-up"
-              data-aos-duration="600"
-              data-aos-delay="200"
-            >
-              <div className="thumb">
-                <i className="ti ti-link"></i>
-                <span>02</span>
-                <Image
-                  src={two}
-                  alt="Right arrow"
-                  className="lg-arrow lg-r-arrow d-none d-xl-block"
-                />
-              </div>
-              <div className="content mt-25">
-                <h6 className="fw-6">Access Blockchain</h6>
-                <p className="text-sm mt-12">
-                  Use your earned tokens to enter the cryptocurrency ecosystem,
-                  manage wallets, and participate in cross-border financial
-                  solutions.
-                </p>
-              </div>
-            </div>
+          <div
+            style={{ flex: "0 0 18%", textAlign: "center", marginTop: "330px" }}
+          >
+            <Image
+              src={whiteChick}
+              alt="Step 2"
+              style={{ width: "80%", height: "auto" }}
+            />
+            <h6>Chick</h6>
+            <p>Wait it to be Chick</p>
           </div>
 
           {/* Step 3 */}
-          <div className="col-12 col-md-6 col-xl-4">
-            <div
-              className="work__single text-center"
-              data-aos="fade-up"
-              data-aos-duration="600"
-              data-aos-delay="400"
-            >
-              <div className="thumb">
-                <i className="ti ti-world"></i>
-                <span>03</span>
-              </div>
-              <div className="content mt-25">
-                <h6 className="fw-6">Expand Financial Opportunities</h6>
-                <p className="text-sm mt-12">
-                  Transform gameplay into real-world financial impact—make
-                  payments, trade, and join global digital markets safely and
-                  efficiently.
-                </p>
-              </div>
-            </div>
+          <div
+            style={{ flex: "0 0 18%", textAlign: "center", marginTop: "270px" }}
+          >
+            <Image
+              src={yellowChick}
+              alt="Step 3"
+              style={{ width: "80%", height: "auto" }}
+            />
+            <h6>Soondong</h6>
+            <p>
+              They are the most numerous chickens, laying eggs once every three
+              days. Feeding and cleaning are essential.
+            </p>
+          </div>
+
+          {/* Step 4 - bigger bird */}
+          <div
+            style={{
+              flex: "0 0 40%",
+              position: "relative",
+              textAlign: "center",
+            }}
+          >
+            <Image
+              src={chickWhite3}
+              alt="Step 4"
+              style={{
+                width: "100%",
+                height: "auto",
+                maxHeight: "800px",
+                // objectFit: "contain",
+              }}
+            />
           </div>
         </div>
       </div>
@@ -113,7 +119,7 @@ const WorkSection = () => {
       <div className="left-thumb">
         <Image src={three} alt="Spring decoration" />
       </div>
-      <div className="right-thumb">
+      <div className="right-thumb" style={{ right: "60%", top: "30%" }}>
         <Image src={four} alt="Left decoration" />
       </div>
       <div className="line">

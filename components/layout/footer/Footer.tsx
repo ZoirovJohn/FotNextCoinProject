@@ -29,7 +29,7 @@ const Footer = () => {
       style={{ backgroundImage: "url(images/footer/footer-bg-two.png)" }}
     >
       <div className="container">
-        <Newsletter />
+        {/* <Newsletter /> */}
 
         <div className="row gutter-60 pt-120 pb-120">
           {/* Logo & About */}
@@ -46,9 +46,8 @@ const Footer = () => {
               </div>
               <div className="footer__widget-content mt-25">
                 <p>
-                  Fafai is an innovative Online Crypto Gaming platform designed
-                  for players to play, earn, and manage digital assets
-                  effortlessly.
+                  FaFai’s Impact FaFai collaborates with global partners to
+                  create a more equitable, sustainable, and inclusive economy.
                 </p>
               </div>
             </div>
@@ -68,86 +67,13 @@ const Footer = () => {
                   <Link href="/">Home</Link>
                 </li>
                 <li>
-                  <Link href="/about-us">About Us</Link>
+                  <Link href="/white-paper">White Paper</Link>
                 </li>
                 <li>
-                  <Link href="/contact-us">Contact Us</Link>
+                  <Link href="/game">Game</Link>
                 </li>
                 <li>
-                  <Link href="/about-us#team">Team</Link>
-                </li>
-                <li>
-                  <Link href="/about-us#careers">Careers</Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Services / Crypto */}
-          <div className="col-6 col-lg-3 col-xl-2">
-            <div
-              className="footer__widget"
-              data-aos="fade-up"
-              data-aos-duration="600"
-              data-aos-delay="400"
-            >
-              <h6 className="fw-6 neutral-top">Services</h6>
-              <ul className="mt-25">
-                <li>
-                  <Link href="/crypto">Wallet</Link>
-                </li>
-                <li>
-                  <Link href="/crypto#markets">Markets</Link>
-                </li>
-                <li>
-                  <Link href="/crypto#guide">Getting Started</Link>
-                </li>
-                {ready && user ? (
-                  <>
-                    <li>
-                      <button className="btn--link p-0" onClick={handleLogout}>
-                        {translations[lang].Logout}
-                      </button>
-                    </li>
-                  </>
-                ) : (
-                  <>
-                    <li>
-                      <Link href="/sign-up">{translations[lang].Signup}</Link>
-                    </li>
-                    <li>
-                      <Link href="/sign-in">{translations[lang].Signin}</Link>
-                    </li>
-                  </>
-                )}
-              </ul>
-            </div>
-          </div>
-
-          {/* Resources / Quick Links */}
-          <div className="col-6 col-lg-3 col-xl-2">
-            <div
-              className="footer__widget"
-              data-aos="fade-up"
-              data-aos-duration="600"
-              data-aos-delay="600"
-            >
-              <h6 className="fw-6 neutral-top">Resources</h6>
-              <ul className="mt-25">
-                <li>
-                  <Link href="/faq">FAQ</Link>
-                </li>
-                <li>
-                  <Link href="/blog">Blog</Link>
-                </li>
-                <li>
-                  <Link href="/lottery">Lottery</Link>
-                </li>
-                <li>
-                  <Link href="/games">Games</Link>
-                </li>
-                <li>
-                  <Link href="/crypto#partners">Partners</Link>
+                  <Link href="/you-tube">You Tube</Link>
                 </li>
               </ul>
             </div>
@@ -169,10 +95,7 @@ const Footer = () => {
                   </div>
                   <div className="content">
                     <p>
-                      <Link href="tel:505-555-0125">(505) 555-0125</Link>
-                    </p>
-                    <p className="mt-4">
-                      <Link href="tel:225-555-0118">(225) 555-0118</Link>
+                      <Link href="tel:505-555-0125">+82 (02) 000-0000</Link>
                     </p>
                   </div>
                 </div>
@@ -183,25 +106,8 @@ const Footer = () => {
                   <div className="content">
                     <p>
                       <Link href="mailto:example@fafai.com">
-                        example@fafai.com
+                        eggmoney@fafai.com
                       </Link>
-                    </p>
-                    <p className="mt-4">
-                      <Link href="mailto:contact@fafai.com">
-                        contact@fafai.com
-                      </Link>
-                    </p>
-                  </div>
-                </div>
-                <div className="footer__widget-group mt-16">
-                  <div className="icon">
-                    <i className="ti ti-map-pin"></i>
-                  </div>
-                  <div className="content">
-                    <p>
-                      <a href="https://www.google.com/maps" target="_blank">
-                        1901 Thornridge Cir. Shiloh, Hawaii 81063
-                      </a>
                     </p>
                   </div>
                 </div>
@@ -221,27 +127,6 @@ const Footer = () => {
                       Copyright &copy; <span>{currentYear}</span>{" "}
                       <Link href="/">Fafai</Link>. All rights reserved.
                     </p>
-                  </div>
-                </div>
-                <div className="col-12 col-lg-7">
-                  <div className="footer__copyright-list">
-                    <ul className="justify-content-center justify-content-lg-end">
-                      <li>
-                        <Link href="contact-us">Help & Support</Link>
-                      </li>
-                      <li>
-                        <span></span>
-                      </li>
-                      <li>
-                        <Link href="terms-conditions">Terms & Conditions</Link>
-                      </li>
-                      <li>
-                        <span></span>
-                      </li>
-                      <li>
-                        <Link href="privacy-policy">Privacy Policy</Link>
-                      </li>
-                    </ul>
                   </div>
                 </div>
               </div>
