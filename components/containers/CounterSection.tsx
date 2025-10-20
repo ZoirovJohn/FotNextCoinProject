@@ -8,7 +8,7 @@ import chickenSuperLegend from "@/public/images/chicken-superlegend.png";
 const Counter = dynamic(() => import("@/components/widgets/Counter"));
 
 const CounterSection = () => {
-  // console.log("Rendering CounterSection");
+  console.log("Rendering CounterSection");
   
   return (
     <section className="counter">

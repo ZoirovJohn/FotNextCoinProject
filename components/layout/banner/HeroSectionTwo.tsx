@@ -4,10 +4,8 @@ import heroBg from "@/public/images/banner/hero.png";
 import bannerThumb from "@/public/images/banner/banner-thumb.png";
 import rocket from "@/public/images/banner/b-rocket.png";
 import btc from "@/public/images/banner/btc.png";
-import coinUp from "@/public/images/banner/b-coin-up.png";
 import coinDown from "@/public/images/banner/b-coin-down.png";
 import point from "@/public/images/banner/b-point.png";
-import lottery from "@/public/images/banner/lottery.png";
 import rightTh from "@/public/images/right-th.png";
 
 const HeroSectionTwo = () => {
@@ -55,7 +53,7 @@ const HeroSectionTwo = () => {
           </div>
         </div>
       </div>
-      <div className="rocket">
+      <div className="rocket" style={{ right: "35%" }}>
         <Image src={rocket} alt="Rocket" />
       </div>
       <div className="btc d-none d-sm-block">
