@@ -9,6 +9,8 @@ import yellowChick from "@/public/images/banner/ChicksDiscoverSectionYellow.png"
 import whiteChick from "@/public/images/banner/ChicksDiscoverSectionWhite.png";
 
 const ChicksDiscoverSection = () => {
+  console.log();
+  
   return (
     <section
       className="banner"
