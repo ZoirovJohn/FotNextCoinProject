@@ -88,38 +88,41 @@ const Footer = () => {
               data-aos-delay="800"
             >
               <h6 className="fw-6 neutral-top">Get In Touch</h6>
-              <div className="footer__widget-content mt-25">
-                <div className="footer__widget-group">
-                  <div className="content">
-                    <p>
-                      <Link href="mailto:support@fafai.io">Email Link</Link>
-                    </p>
-                    <p>
-                      <Link href="https://t.me/fafai_Community" target="_blank">
-                        Telegram Link
-                      </Link>
-                    </p>
-                    <p>
-                      <Link href="https://fafai.io" target="_blank">
-                        FAFAI Coin Website Link
-                      </Link>
-                    </p>
-                    <p>
-                      <Link
-                        href="https://www.youtube.com/@오늘의농장"
-                        target="_blank"
-                      >
-                        YouTube Link
-                      </Link>
-                    </p>
-                    <p>
-                      <Link href="https://eggmoney.io/" target="_blank">
-                        Game Website Link
-                      </Link>
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <ul className="mt-25">
+                <li>
+                  <Link href="mailto:support@fafai.io">
+                    Email: support@fafai.io
+                  </Link>
+                </li>
+                <li>
+                  <Link href="https://fafai.io" target="_blank">
+                    Official Site: https://fafai.io
+                  </Link>
+                </li>
+                <li>
+                  <Link href="https://t.me/fafai_Community" target="_blank">
+                    Telegram: https://t.me/fafai_Community
+                  </Link>
+                </li>
+                <li>
+                  <Link href="https://fafai.io" target="_blank">
+                    FAFAI Coin Website: https://fafai.io
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="https://www.youtube.com/@오늘의농장"
+                    target="_blank"
+                  >
+                    YouTube: www.youtube.com/@오늘의농장
+                  </Link>
+                </li>
+                <li>
+                  <Link href="https://eggmoney.io/" target="_blank">
+                    Game Website: https://eggmoney.io
+                  </Link>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
